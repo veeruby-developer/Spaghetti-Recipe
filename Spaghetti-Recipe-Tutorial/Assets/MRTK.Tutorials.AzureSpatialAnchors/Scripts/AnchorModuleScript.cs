@@ -29,7 +29,7 @@ public class AnchorModuleScript : MonoBehaviour
     private CloudSpatialAnchorWatcher currentWatcher;
 
     private readonly Queue<Action> dispatchQueue = new Queue<Action>();
-
+    public bool isStart, isCreate, isRemove, isStop;
     #region Unity Lifecycle
     void Start()
     {
@@ -86,7 +86,7 @@ public class AnchorModuleScript : MonoBehaviour
 
         // Starts the session if not already started
         await cloudManager.StartSessionAsync();
-
+        isStart = true;
         Debug.Log("Azure session started successfully");
     }
 
@@ -104,7 +104,7 @@ public class AnchorModuleScript : MonoBehaviour
 
         // Resets the current session if there is one, and waits for any active queries to be stopped
         await cloudManager.ResetSessionAsync();
-
+        isStop = true;
         Debug.Log("Azure session stopped successfully");
     }
 

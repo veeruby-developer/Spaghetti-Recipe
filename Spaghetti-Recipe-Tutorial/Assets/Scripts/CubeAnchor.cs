@@ -22,8 +22,12 @@ public class CubeAnchor : MonoBehaviour
     public void CreateAnchor()
     {
         anchorScript.StartAzureSession();
-
-        anchorScript.CreateAzureAnchor(cube);
+        if(anchorScript.isStart == true)
+        {
+            anchorScript.CreateAzureAnchor(cube);
+            anchorScript.isStart = false;
+        }
+        
 
        // anchorScript.StopAzureSession();
     }
