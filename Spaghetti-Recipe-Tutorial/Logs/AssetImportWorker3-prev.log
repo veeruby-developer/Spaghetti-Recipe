@@ -1,0 +1,142 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19042) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 8029 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\2020.3.25f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+55138
+Successfully changed project path to: G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 76.27 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.25f1 (9b9180224418)
+[Subsystems] Discovering subsystems at path D:/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Vendor:   
+    VRAM:     3962 MB
+    Driver:   27.21.14.5167
+Initialize mono
+Mono path[0] = 'D:/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'D:/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001223 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 69.04 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.584 seconds
+Domain Reload Profiling:
+	ReloadAssembly (585ms)
+		BeginReloadAssembly (49ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (466ms)
+			LoadAssemblies (49ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (140ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (192ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (69ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (76ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007031 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 71.02 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Unity\Spaghetti Recipe Project\Spaghetti-Recipe\Spaghetti-Recipe-Tutorial\Library\PackageCache\com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247\SDK\StandardAssets\Profiles\BoundsControl\HoloLens2Style_Volumetric'.
+  at System.IO.__Error.WinIOError (System.Int32 errorCode, System.String maybeFullPath) [0x000f7] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.FileSystemEnumerableIterator`1[TSource].HandleError (System.Int32 hr, System.String path) [0x00006] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.FileSystemEnumerableIterator`1[TSource].CommonInit () [0x00054] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.FileSystemEnumerableIterator`1[TSource]..ctor (System.String path, System.String originalUserPath, System.String searchPattern, System.IO.SearchOption searchOption, System.IO.SearchResultHandler`1[TSource] resultHandler, System.Boolean checkHost) [0x000d6] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.FileSystemEnumerableFactory.CreateFileNameIterator (System.String path, System.String originalUserPath, System.String searchPattern, System.Boolean includeFiles, System.Boolean includeDirs, System.IO.SearchOption searchOption, System.Boolean checkHost) [0x00009] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.Directory.InternalGetFileDirectoryNames (System.String path, System.String userPathOriginal, System.String searchPattern, System.Boolean includeFiles, System.Boolean includeDirs, System.IO.SearchOption searchOption, System.Boolean checkHost) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.Directory.InternalGetFiles (System.String path, System.String searchPattern, System.IO.SearchOption searchOption) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern) [0x0001c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.DirectoryInfo.GetFiles (System.String searchPattern) [0x0000e] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.DirectoryInfo.GetFilesSubdirs (System.Collections.ArrayList l, System.String pattern) [0x00002] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo.GetFilesSubdirs(System.Collections.ArrayList,string)
+  at System.IO.DirectoryInfo.GetFilesSubdirs (System.Collections.ArrayList l, System.String pattern) [0x0002f] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo.GetFilesSubdirs(System.Collections.ArrayList,string)
+  at System.IO.DirectoryInfo.GetFilesSubdirs (System.Collections.ArrayList l, System.String pattern) [0x0002f] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo.GetFilesSubdirs(System.Collections.ArrayList,string)
+  at System.IO.DirectoryInfo.GetFilesSubdirs (System.Collections.ArrayList l, System.String pattern) [0x0002f] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo.GetFilesSubdirs(System.Collections.ArrayList,string)
+  at System.IO.DirectoryInfo.GetFilesSubdirs (System.Collections.ArrayList l, System.String pattern) [0x0002f] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo.GetFilesSubdirs(System.Collections.ArrayList,string)
+  at System.IO.DirectoryInfo.GetFilesSubdirs (System.Collections.ArrayList l, System.String pattern) [0x0002f] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo.GetFilesSubdirs(System.Collections.ArrayList,string)
+  at System.IO.DirectoryInfo.GetFilesSubdirs (System.Collections.ArrayList l, System.String pattern) [0x0002f] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.IO.DirectoryInfo.GetFiles (System.String searchPattern, System.IO.SearchOption searchOption) [0x00017] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo.GetFiles(string,System.IO.SearchOption)
+  at Microsoft.MixedReality.Toolkit.Utilities.Editor.OnLoadUtilities.FindShaderFolderInPackage () [0x0004c] in G:\Unity\Spaghetti Recipe Project\Spaghetti-Recipe\Spaghetti-Recipe-Tutorial\Library\PackageCache\com.microsoft.mixedreality.toolkit.standardassets@21c7aff96a0a-1640241933416\EditorUtilities\OnLoadUtilities.cs:152 
+  at Microsoft.MixedReality.Toolkit.Utilities.Editor.OnLoadUtilities.EnsureShaders (System.Boolean bypassIgnore) [0x00000] in G:\Unity\Spaghetti Recipe Project\Spaghetti-Recipe\Spaghetti-Recipe-Tutorial\Library\PackageCache\com.microsoft.mixedreality.toolkit.standardassets@21c7aff96a0a-1640241933416\EditorUtilities\OnLoadUtilities.cs:42 
+  at Microsoft.MixedReality.Toolkit.Utilities.Editor.OnLoadUtilities..cctor () [0x00000] in G:\Unity\Spaghetti Recipe Project\Spaghetti-Recipe\Spaghetti-Recipe-Tutorial\Library\PackageCache\com.microsoft.mixedreality.toolkit.standardassets@21c7aff96a0a-1640241933416\EditorUtilities\OnLoadUtilities.cs:23 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Failed to locate MixedRealityToolkit folders in the project.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityToolkitFiles:MapRelativePathToAbsolutePath (Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityToolkitFiles/SearchType,Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityToolkitModuleType,string) (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247/Core/Utilities/Editor/Setup/MixedRealityToolkitFiles.cs:538)
+Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityToolkitFiles:MapRelativeFolderPathToAbsolutePath (Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityToolkitModuleType,string) (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247/Core/Utilities/Editor/Setup/MixedRealityToolkitFiles.cs:361)
+Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityToolkitPreserveSettings:EnsureLinkXml () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247/Core/Utilities/Editor/Setup/MixedRealityToolkitPreserveSettings.cs:65)
+Microsoft.MixedReality.Toolkit.Utilities.Editor.EditorProjectUtilities:.cctor () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247/Core/Utilities/Editor/EditorProjectUtilities.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247/Core/Utilities/Editor/Setup/MixedRealityToolkitFiles.cs Line: 538)
+
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path1
+  at System.IO.Path.Combine (System.String path1, System.String path2) [0x00003] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at Microsoft.MixedReality.Toolkit.Utilities.Editor.MixedRealityToolkitPreserveSettings.EnsureLinkXml () [0x0000b] in G:\Unity\Spaghetti Recipe Project\Spaghetti-Recipe\Spaghetti-Recipe-Tutorial\Library\PackageCache\com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247\Core\Utilities\Editor\Setup\MixedRealityToolkitPreserveSettings.cs:66 
+  at Microsoft.MixedReality.Toolkit.Utilities.Editor.EditorProjectUtilities..cctor () [0x00022] in G:\Unity\Spaghetti Recipe Project\Spaghetti-Recipe\Spaghetti-Recipe-Tutorial\Library\PackageCache\com.microsoft.mixedreality.toolkit.foundation@61d9ea0c72ed-1640241929247\Core\Utilities\Editor\EditorProjectUtilities.cs:34 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
