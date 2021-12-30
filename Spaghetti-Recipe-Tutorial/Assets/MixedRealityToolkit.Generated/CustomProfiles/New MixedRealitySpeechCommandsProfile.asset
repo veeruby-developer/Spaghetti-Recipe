@@ -52,13 +52,6 @@ MonoBehaviour:
       description: None
       axisConstraint: 0
   - localizationKey: 
-    keyword: Start
-    keyCode: 0
-    action:
-      id: 1
-      description: Select
-      axisConstraint: 2
-  - localizationKey: 
     keyword: Setup Mode
     keyCode: 0
     action:

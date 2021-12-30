@@ -28,5 +28,4 @@ public class UIManager : MonoBehaviour
         anchorCube.SetActive(true);
     }
 
-    
 }

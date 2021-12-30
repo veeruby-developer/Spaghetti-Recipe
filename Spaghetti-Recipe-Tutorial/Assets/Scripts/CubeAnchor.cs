@@ -21,9 +21,11 @@ public class CubeAnchor : MonoBehaviour
 
     public void CreateAnchor()
     {
+        Debug.Log("Anchor create bool - " + anchorScript.isStart);
         anchorScript.StartAzureSession();
         if(anchorScript.isStart == true)
         {
+            Debug.Log("if Anchor create bool - " + anchorScript.isStart);
             anchorScript.CreateAzureAnchor(cube);
             anchorScript.isStart = false;
         }
