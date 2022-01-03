@@ -7,42 +7,35 @@ public class SceneUIManager : MonoBehaviour
 {
     [Header("UI Components")]
     [Tooltip("UI panels")]
-    [SerializeField] public GameObject welcomePanel, modePanel, instructionPanel, voiceMessagePanel, eyeMessagePanel;
+    [SerializeField]
+    public GameObject mainPage;
+    [SerializeField]
+    public GameObject modePage;
+    [SerializeField]
+    public GameObject voiceMessagePanel;
+    [SerializeField]
+    public GameObject eyeMessagePanel;
+
     [Tooltip("UI text")]
     public TextMeshProUGUI voiceMessage, eyeMessage;
 
-    [Tooltip("Anchor Object")]
-    [SerializeField] public GameObject anchorCube;
-
+    
     #region Public Methods
 
     //Function for welcome panel button
-    public void WelcomeStartFunction()
+    public void LoadMainMenu()
     {
-        welcomePanel.SetActive(false);
-        modePanel.SetActive(true);
+        mainPage.SetActive(false);
+        modePage.SetActive(true);
     }
 
-    //SetupMode button function for futher flow
-    public void SetupModeFunction()
-    {
-        modePanel.SetActive(false);
-        instructionPanel.SetActive(true);
-    }
-
-    //Instruction panel button in setupmode 
-    public void InstructionPanelFunction()
-    {
-        instructionPanel.SetActive(false);
-        anchorCube.SetActive(true);
-    }
-
+       
     //Setup mode button function with popup messages
-    public void SetupMode()
+    public void StartSetupMode()
     {
         voiceMessage.text = "Setup Mode Loaded";
         voiceMessagePanel.SetActive(true);
-        modePanel.SetActive(false);
+        modePage.SetActive(false);
         StartCoroutine(Setup());
     }
     //Set delay time for message panel to disappear 
@@ -50,15 +43,15 @@ public class SceneUIManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         voiceMessagePanel.SetActive(false);
-        modePanel.SetActive(true);
+        modePage.SetActive(true);
     }
 
     //Recipe mode button function with popup messages
-    public void RecipeMode()
+    public void StartRecipeMode()
     {
         voiceMessage.text = "Recipe Mode Loaded";
         voiceMessagePanel.SetActive(true);
-        modePanel.SetActive(false);
+        modePage.SetActive(false);
         StartCoroutine(Recipe());
     }
     //Set delay time for message panel to disappear 
@@ -66,22 +59,22 @@ public class SceneUIManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         voiceMessagePanel.SetActive(false);
-        modePanel.SetActive(true);
+        modePage.SetActive(true);
     }
 
     //Function for eyegaze on setup mode
-    public void EyeGazeFunction_SetupModeON()
+    public void EnableEyeTrackingSetupMode()
     {
         eyeMessage.text = "This mode helps you to setup the cooking experince";
         eyeMessagePanel.SetActive(true);
     }
     //Function for eyegaze on recipe mode
-    public void EyeGazeFunction_RecipeModeON()
+    public void EnableEyeTrackingRecipeMode()
     {
         eyeMessage.text = "This mode helps you to cook the recipe";
         eyeMessagePanel.SetActive(true);
     }
-    public void EyeGazeFunctionOff()
+    public void DisableEyeTracking()
     {
         eyeMessagePanel.SetActive(false);
     }

@@ -29,7 +29,7 @@ public class AnchorModuleScript : MonoBehaviour
     private CloudSpatialAnchorWatcher currentWatcher;
 
     private readonly Queue<Action> dispatchQueue = new Queue<Action>();
-    public bool isStart, isCreate, isRemove, isStop;
+    public bool isStart, isCreate, isRemove, isStop, isFind;
     #region Unity Lifecycle
     void Start()
     {
@@ -178,6 +178,7 @@ public class AnchorModuleScript : MonoBehaviour
                 // Update the current Azure anchor ID
                 Debug.Log($"Current Azure anchor ID updated to '{currentCloudAnchor.Identifier}'");
                 currentAzureAnchorID = currentCloudAnchor.Identifier;
+                isCreate = true;
             }
             else
             {
@@ -216,6 +217,7 @@ public class AnchorModuleScript : MonoBehaviour
         else
         {
             Debug.Log("Local anchor deleted succesfully");
+            isRemove = true;
             gameObject.DeleteNativeAnchor();
         }
 #else
@@ -265,6 +267,7 @@ public class AnchorModuleScript : MonoBehaviour
             Debug.Log("Attempt to create watcher failed, no session exists");
             currentWatcher = null;
         }
+        //isFind = true;
     }
 
     public async void DeleteAzureAnchor()
@@ -381,6 +384,7 @@ public class AnchorModuleScript : MonoBehaviour
 
                     // Notify AnchorFeedbackScript
                     OnCreateLocalAnchor?.Invoke();
+                    isFind = true;
                 }
 
 #elif UNITY_ANDROID || UNITY_IOS
