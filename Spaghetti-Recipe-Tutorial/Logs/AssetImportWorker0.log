@@ -1,78 +1,91 @@
 Using pre-set license
-Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19042) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 8029 MB
+Built from '2020.3/release' branch; Version is '2020.3.7f1 (dd97f2c94397) revision 14522354'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1415; Version 2009; 64bit' Language: 'en' Physical Memory: 16315 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
-COMMAND LINE ARGUMENTS:
-D:\2020.3.25f1\Editor\Unity.exe
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\2020.3.7f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54041
-Successfully changed project path to: G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
-G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+59968
+Successfully changed project path to: C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 14894.26 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 84.91 ms, found 10 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.25f1 (9b9180224418)
-[Subsystems] Discovering subsystems at path D:/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial/Assets
+Initialize engine version: 2020.3.7f1 (dd97f2c94397)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 630 (ID=0x3e9b)
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 710 (ID=0x128b)
     Vendor:   
-    VRAM:     4014 MB
-    Driver:   26.20.100.6911
+    VRAM:     2007 MB
+    Driver:   27.21.14.5671
 Initialize mono
-Mono path[0] = 'D:/2020.3.25f1/Editor/Data/Managed'
-Mono path[1] = 'D:/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
+Mono path[0] = 'C:/Program Files/Unity/2020.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: D:/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.103397 seconds.
+Register platform support module: C:/Program Files/Unity/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002040 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 109.86 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 71.60 ms, found 10 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.095 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1095ms)
-		BeginReloadAssembly (63ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (0ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (847ms)
-			LoadAssemblies (143ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (187ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (316ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (110ms)
-				BeforeProcessingInitializeOnLoad (21ms)
-				ProcessInitializeOnLoadAttributes (109ms)
-				ProcessInitializeOnLoadMethodAttributes (69ms)
-				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (0ms)
+- Completed reload, in  1.587 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 1.073437 seconds.
+Registered in 0.009375 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 69.00 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[XR] Error loading subsystem: Display (1) (header mismatch?)
+[XR] [MROpenXR][Info   ][15:18:23.893279][tid:16c] MeshProvider_RegisterLifecycleProvider
+[XR] [MROpenXR][Info   ][15:18:23.893366][tid:16c] InputProvider_RegisterLifeCycleProvider
+[XR] [MROpenXR][Info   ][15:18:23.893987][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment unityVersion=2020.3.7f1
+[XR] [MROpenXR][Info   ][15:18:23.894465][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment openXRPluginVersion=1.3.1
+[XR] [MROpenXR][Info   ][15:18:23.894508][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment mrOpenXRPluginVersion=1.2.1.0
+[XR] [MROpenXR][Info   ][15:18:23.894563][tid:16c] OnPluginStarted UnityVersion=2020.3.7f1 OpenXRPluginVersion=1.3.1 MROpenXRPluginVersion=1.2.1.0 PartA_PrivTags=33554432
+Mono: successfully reloaded assembly
+- Completed reload, in  2.309 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.09 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.7 MB.
+System memory in use after: 161.3 MB.
+
+Unloading 804 unused Assets to reduce memory usage. Loaded Objects now: 4144.
+Total: 4.699300 ms (FindLiveObjects: 0.627700 ms CreateObjectMapping: 0.128300 ms MarkObjects: 3.164800 ms  DeleteObjects: 0.777100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/StartButtonTheme.asset
+  artifactKey: Guid(db99066245d6bb04298c6f58336848e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StartButtonTheme.asset using Guid(db99066245d6bb04298c6f58336848e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '838851d7889c02c2b460066cf2e651ae') in 0.038889 seconds
+  Import took 0.045089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Main Canvas.prefab
+  artifactKey: Guid(c838e156795404d4380e1046ed45f800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main Canvas.prefab using Guid(c838e156795404d4380e1046ed45f800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '848d23200b8848a9eb10d35c97627ac8') in 0.055750 seconds
+  Import took 0.061502 seconds .
+
