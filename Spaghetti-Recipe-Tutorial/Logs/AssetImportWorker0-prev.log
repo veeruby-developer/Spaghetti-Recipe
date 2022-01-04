@@ -1,33 +1,443 @@
 Using pre-set license
-Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19042) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 8029 MB
+Built from '2020.3/release' branch; Version is '2020.3.7f1 (dd97f2c94397) revision 14522354'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1415; Version 2009; 64bit' Language: 'en' Physical Memory: 16315 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
-COMMAND LINE ARGUMENTS:
-D:\2020.3.25f1\Editor\Unity.exe
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\2020.3.7f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52700
-Successfully changed project path to: G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
-G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+59968
+Successfully changed project path to: C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 9426.93 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 84.91 ms, found 10 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.25f1 (9b9180224418)
-[Subsystems] Discovering subsystems at path D:/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial/Assets
+Initialize engine version: 2020.3.7f1 (dd97f2c94397)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Admin/Documents/GitHub/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 710 (ID=0x128b)
     Vendor:   
-    VRAM:     3962 MB
-    Driver:   27.21.14.5167
+    VRAM:     2007 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/2020.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002040 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 71.60 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.587 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009375 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 69.00 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[XR] Error loading subsystem: Display (1) (header mismatch?)
+[XR] [MROpenXR][Info   ][15:18:23.893279][tid:16c] MeshProvider_RegisterLifecycleProvider
+[XR] [MROpenXR][Info   ][15:18:23.893366][tid:16c] InputProvider_RegisterLifeCycleProvider
+[XR] [MROpenXR][Info   ][15:18:23.893987][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment unityVersion=2020.3.7f1
+[XR] [MROpenXR][Info   ][15:18:23.894465][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment openXRPluginVersion=1.3.1
+[XR] [MROpenXR][Info   ][15:18:23.894508][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment mrOpenXRPluginVersion=1.2.1.0
+[XR] [MROpenXR][Info   ][15:18:23.894563][tid:16c] OnPluginStarted UnityVersion=2020.3.7f1 OpenXRPluginVersion=1.3.1 MROpenXRPluginVersion=1.2.1.0 PartA_PrivTags=33554432
+Mono: successfully reloaded assembly
+- Completed reload, in  2.309 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.09 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.7 MB.
+System memory in use after: 161.3 MB.
+
+Unloading 804 unused Assets to reduce memory usage. Loaded Objects now: 4144.
+Total: 4.699300 ms (FindLiveObjects: 0.627700 ms CreateObjectMapping: 0.128300 ms MarkObjects: 3.164800 ms  DeleteObjects: 0.777100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/StartButtonTheme.asset
+  artifactKey: Guid(db99066245d6bb04298c6f58336848e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StartButtonTheme.asset using Guid(db99066245d6bb04298c6f58336848e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '838851d7889c02c2b460066cf2e651ae') in 0.038889 seconds
+  Import took 0.045089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Main Canvas.prefab
+  artifactKey: Guid(c838e156795404d4380e1046ed45f800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Main Canvas.prefab using Guid(c838e156795404d4380e1046ed45f800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '848d23200b8848a9eb10d35c97627ac8') in 0.055750 seconds
+  Import took 0.061502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 120.642917 seconds.
+  path: Assets/Material/Back.mat
+  artifactKey: Guid(b54df43f476b5234e89e4a3325f195b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/Back.mat using Guid(b54df43f476b5234e89e4a3325f195b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b6992e6be2b21e573adc9351fae548') in 0.187168 seconds
+  Import took 0.192797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Material/Next.mat
+  artifactKey: Guid(7a3588de052dd2448b86f8aa7d69bf6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/Next.mat using Guid(7a3588de052dd2448b86f8aa7d69bf6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22f85f0b675e10cc06ec374a51fc90e2') in 0.015585 seconds
+  Import took 0.020965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Material/BoxMat.mat
+  artifactKey: Guid(9aa251bee976e3147b34bf6240d5e062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/BoxMat.mat using Guid(9aa251bee976e3147b34bf6240d5e062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd91f10ebdaca1caa32acc3f970e601') in 0.019604 seconds
+  Import took 0.025382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002414 seconds.
+  path: Assets/Material/BoxMat.mat
+  artifactKey: Guid(9aa251bee976e3147b34bf6240d5e062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material/BoxMat.mat using Guid(9aa251bee976e3147b34bf6240d5e062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd91f10ebdaca1caa32acc3f970e601') in 0.016160 seconds
+  Import took 0.021855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052748 seconds.
+  path: Assets/MixedRealityToolkit.Generated/ProjectPreferences.asset
+  artifactKey: Guid(eac821eb8e406b949ab4634deed0b308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/ProjectPreferences.asset using Guid(eac821eb8e406b949ab4634deed0b308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac5c37bb86ac3d72df65590abd601a4b') in 0.006717 seconds
+  Import took 0.012554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 223.999919 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(384e565f10d7baf41a740f707be1650b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(384e565f10d7baf41a740f707be1650b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5d5279d1a7f68544502ace970eacb6c') in 0.007353 seconds
+  Import took 0.013412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002085 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(384e565f10d7baf41a740f707be1650b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(384e565f10d7baf41a740f707be1650b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5d5279d1a7f68544502ace970eacb6c') in 0.002779 seconds
+  Import took 0.008492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.933850 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(533648c45d5e0684389cd6058d133578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(533648c45d5e0684389cd6058d133578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1544d9daf11497ae4463c5d938d6e742') in 0.007069 seconds
+  Import took 0.012864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.233865 seconds.
+  path: Assets/Scenes/Azure Speech.unity
+  artifactKey: Guid(ec9813d402664934ba812c45d662404a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Azure Speech.unity using Guid(ec9813d402664934ba812c45d662404a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a72a0f06e42fe09def21ecec884182ee') in 0.007404 seconds
+  Import took 0.013383 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013593 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Error when attempting to update scene info fields. Scene info data may be stale.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:RefreshSceneInfoFieldsInScriptableObjects () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:313)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:InitializeOnLoad () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:231)
+
+(Filename: Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs Line: 313)
+
+[XR] [MROpenXR][Info   ][15:26:27.867956][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment unityVersion=2020.3.7f1
+[XR] [MROpenXR][Info   ][15:26:27.868419][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment openXRPluginVersion=1.3.1
+[XR] [MROpenXR][Info   ][15:26:27.868466][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment mrOpenXRPluginVersion=1.2.1.0
+[XR] [MROpenXR][Info   ][15:26:27.868523][tid:16c] OnPluginStarted UnityVersion=2020.3.7f1 OpenXRPluginVersion=1.3.1 MROpenXRPluginVersion=1.2.1.0 PartA_PrivTags=33554432
+Mono: successfully reloaded assembly
+- Completed reload, in  1.898 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(21) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.15 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3770 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 154.7 MB.
+System memory in use after: 154.5 MB.
+
+Unloading 406 unused Assets to reduce memory usage. Loaded Objects now: 4192.
+Total: 3.408100 ms (FindLiveObjects: 0.630200 ms CreateObjectMapping: 0.111300 ms MarkObjects: 2.322500 ms  DeleteObjects: 0.342600 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 10.92 ms, found 10 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 37 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.8 MB.
+System memory in use after: 75.1 MB.
+
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 4192.
+Total: 3.505900 ms (FindLiveObjects: 0.416100 ms CreateObjectMapping: 0.106900 ms MarkObjects: 2.954900 ms  DeleteObjects: 0.026700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 318.191242 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New Animator Override Controller.overrideController
+  artifactKey: Guid(6e1b098cf52968c4493c910278ea2af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New Animator Override Controller.overrideController using Guid(6e1b098cf52968c4493c910278ea2af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba62e5ba1fe78d144d777ae4410f92af') in 0.016223 seconds
+  Import took 0.022061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSystemProfile.asset
+  artifactKey: Guid(00d8841a7c0ffe4408ca5a36f0f7bd39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSystemProfile.asset using Guid(00d8841a7c0ffe4408ca5a36f0f7bd39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff1641a84c0da7b41ae4aecc188fe21') in 0.078389 seconds
+  Import took 0.084550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile.asset
+  artifactKey: Guid(9cde964e7cf061a40b1c002cf3e0af4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile.asset using Guid(9cde964e7cf061a40b1c002cf3e0af4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1cbd65e366c5ae50018981f95a1d8d0') in 0.058482 seconds
+  Import took 0.066003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityPointerProfile.asset
+  artifactKey: Guid(0f4e6eef5886d2648b9b64eca06e6367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityPointerProfile.asset using Guid(0f4e6eef5886d2648b9b64eca06e6367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4a7b9941506f66568bc1cdecc00b87') in 0.015112 seconds
+  Import took 0.021467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSimulationProfile.asset
+  artifactKey: Guid(a164a0880ea6d1043ab6fbd247071d1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSimulationProfile.asset using Guid(a164a0880ea6d1043ab6fbd247071d1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '450ef1672fbfaaaf15687714484a0787') in 0.007429 seconds
+  Import took 0.013024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset
+  artifactKey: Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset using Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ceab84c0156ea9bfcf396e2ee62bc1f') in 0.050003 seconds
+  Import took 0.057466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealitySpeechCommandsProfile.asset
+  artifactKey: Guid(2bbe026fac60a884b96c629d1f3dbad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealitySpeechCommandsProfile.asset using Guid(2bbe026fac60a884b96c629d1f3dbad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04830bbe061ef1b6576938caaa2ce475') in 0.007161 seconds
+  Import took 0.012994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.122287 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset
+  artifactKey: Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset using Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d4f06ccf9a796afdba3f47198a5102') in 0.045847 seconds
+  Import took 0.053043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.837589 seconds.
+  path: Assets/Prefab/AnchorCube.prefab
+  artifactKey: Guid(424b490fb036a58419e5f49bcb79a9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/AnchorCube.prefab using Guid(424b490fb036a58419e5f49bcb79a9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08abce724af5f491bb1ef494f043774f') in 0.143372 seconds
+  Import took 0.150578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Prefab/Cube.prefab
+  artifactKey: Guid(39822c50ee18d314d98f4a61e25321ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Cube.prefab using Guid(39822c50ee18d314d98f4a61e25321ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccca0e34d99fd90ac3444995af29cfd3') in 0.078729 seconds
+  Import took 0.084359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Prefab/SceneDescriptionPanelRev1.prefab
+  artifactKey: Guid(896d7245cf4adb7478d5b6c602f24dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/SceneDescriptionPanelRev1.prefab using Guid(896d7245cf4adb7478d5b6c602f24dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f9121cac92878bab4f6e9668d8ff882') in 0.110747 seconds
+  Import took 0.116989 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 131.642361 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSystemProfile 1.asset
+  artifactKey: Guid(f0d1362665e38644fa2d386936341427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSystemProfile 1.asset using Guid(f0d1362665e38644fa2d386936341427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c59f3cbb3bd32de685ae8fb666d1048b') in 0.050731 seconds
+  Import took 0.057831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset
+  artifactKey: Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset using Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a528b9c56d94d7a6d129eb246158f4a') in 0.047427 seconds
+  Import took 0.055292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSystemProfile 1.asset
+  artifactKey: Guid(f0d1362665e38644fa2d386936341427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityInputSystemProfile 1.asset using Guid(f0d1362665e38644fa2d386936341427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c59f3cbb3bd32de685ae8fb666d1048b') in 0.041747 seconds
+  Import took 0.049143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset
+  artifactKey: Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MixedRealityToolkit.Generated/CustomProfiles/New MixedRealityToolkitConfigurationProfile 1.asset using Guid(3e56aa35f24b24049a8e8e4af4b67b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a528b9c56d94d7a6d129eb246158f4a') in 0.046204 seconds
+  Import took 0.053114 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015174 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Error when attempting to update scene info fields. Scene info data may be stale.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:RefreshSceneInfoFieldsInScriptableObjects () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:313)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:InitializeOnLoad () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:231)
+
+(Filename: Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs Line: 313)
+
+[XR] [MROpenXR][Info   ][15:44:12.055298][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment unityVersion=2020.3.7f1
+[XR] [MROpenXR][Info   ][15:44:12.055761][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment openXRPluginVersion=1.3.1
+[XR] [MROpenXR][Info   ][15:44:12.055804][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment mrOpenXRPluginVersion=1.2.1.0
+[XR] [MROpenXR][Info   ][15:44:12.055860][tid:16c] OnPluginStarted UnityVersion=2020.3.7f1 OpenXRPluginVersion=1.3.1 MROpenXRPluginVersion=1.2.1.0 PartA_PrivTags=33554432
+Mono: successfully reloaded assembly
+- Completed reload, in  1.895 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(21) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.57 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3831 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.4 MB.
+System memory in use after: 157.1 MB.
+
+Unloading 473 unused Assets to reduce memory usage. Loaded Objects now: 4200.
+Total: 3.722200 ms (FindLiveObjects: 0.446700 ms CreateObjectMapping: 0.107200 ms MarkObjects: 2.629000 ms  DeleteObjects: 0.537900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015369 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.64 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Error when attempting to update scene info fields. Scene info data may be stale.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:RefreshSceneInfoFieldsInScriptableObjects () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:313)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:InitializeOnLoad () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:231)
+
+(Filename: Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs Line: 313)
+
+[XR] [MROpenXR][Info   ][15:47:36.238705][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment unityVersion=2020.3.7f1
+[XR] [MROpenXR][Info   ][15:47:36.239154][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment openXRPluginVersion=1.3.1
+[XR] [MROpenXR][Info   ][15:47:36.239196][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment mrOpenXRPluginVersion=1.2.1.0
+[XR] [MROpenXR][Info   ][15:47:36.239251][tid:16c] OnPluginStarted UnityVersion=2020.3.7f1 OpenXRPluginVersion=1.3.1 MROpenXRPluginVersion=1.2.1.0 PartA_PrivTags=33554432
+Mono: successfully reloaded assembly
+- Completed reload, in  1.886 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(21) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.58 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3838 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.9 MB.
+System memory in use after: 157.6 MB.
+
+Unloading 471 unused Assets to reduce memory usage. Loaded Objects now: 4213.
+Total: 3.722400 ms (FindLiveObjects: 0.488900 ms CreateObjectMapping: 0.111900 ms MarkObjects: 2.642600 ms  DeleteObjects: 0.477800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015974 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.64 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Error when attempting to update scene info fields. Scene info data may be stale.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:RefreshSceneInfoFieldsInScriptableObjects () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:313)
+Microsoft.MixedReality.Toolkit.Editor.SceneInfoUtils:InitializeOnLoad () (at Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs:231)
+
+(Filename: Library/PackageCache/com.microsoft.mixedreality.toolkit.foundation@1d0b6c7f44b9-1641203135051/Core/Inspectors/PropertyDrawers/SceneInfoUtils.cs Line: 313)
+
+[XR] [MROpenXR][Info   ][15:47:55.976999][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment unityVersion=2020.3.7f1
+[XR] [MROpenXR][Info   ][15:47:55.977445][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment openXRPluginVersion=1.3.1
+[XR] [MROpenXR][Info   ][15:47:55.977487][tid:16c] MicrosoftOpenXRPlugin_SetPluginEnvironment mrOpenXRPluginVersion=1.2.1.0
+[XR] [MROpenXR][Info   ][15:47:55.977543][tid:16c] OnPluginStarted UnityVersion=2020.3.7f1 OpenXRPluginVersion=1.3.1 MROpenXRPluginVersion=1.2.1.0 PartA_PrivTags=33554432
+Mono: successfully reloaded assembly
+- Completed reload, in  1.889 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(21) subTarget(0) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.61 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3846 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 158.1 MB.
+System memory in use after: 157.9 MB.
+
+Unloading 471 unused Assets to reduce memory usage. Loaded Objects now: 4228.
+Total: 4.290500 ms (FindLiveObjects: 0.577900 ms CreateObjectMapping: 0.123100 ms MarkObjects: 3.114700 ms  DeleteObjects: 0.472000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 998.432626 seconds.
+  path: Assets/MRTK.Tutorials.AzureSpeechServices/Prefabs
+  artifactKey: Guid(a20300338a9a71d4d81285a802434ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MRTK.Tutorials.AzureSpeechServices/Prefabs using Guid(a20300338a9a71d4d81285a802434ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46ce68e5bf033a22bb0014c9e4074ae6') in 0.013068 seconds
+  Import took 0.019372 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
