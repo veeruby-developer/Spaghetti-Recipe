@@ -23,10 +23,12 @@ public class TexttoSpeech : MonoBehaviour
         string msg = inputText.text;
         // Required to insure non-blocking code in the main Unity UI thread.
         await Task.Run(() => SpeakWithSDKPlugin(msg));
+        Debug.Log("SpeechPlayback");
     }
 
     public void SpeakWithSDKPlugin(string message)
     {
+        Debug.Log("Speak");
         Synthesize cortana = new Synthesize();
         SpeechSynthesizer synthesizer;
 

@@ -9,9 +9,10 @@ PluginImporter:
   isPreloaded: 0
   isOverridable: 0
   isExplicitlyReferenced: 0
+  validateReferences: 1
   platformData:
   - first:
-      '': Any
+      : Any
     second:
       enabled: 0
       settings:
@@ -21,9 +22,10 @@ PluginImporter:
         Exclude Linux64: 1
         Exclude LinuxUniversal: 1
         Exclude OSXUniversal: 1
+        Exclude WebGL: 1
         Exclude Win: 1
         Exclude Win64: 1
-        Exclude WindowsStoreApps: 1
+        Exclude WindowsStoreApps: 0
         Exclude iOS: 1
   - first:
       Android: Android
@@ -89,9 +91,9 @@ PluginImporter:
   - first:
       Windows Store Apps: WindowsStoreApps
     second:
-      enabled: 0
+      enabled: 1
       settings:
-        CPU: X86
+        CPU: ARM64
         DontProcess: false
         PlaceholderPath: 
         SDK: UWP
