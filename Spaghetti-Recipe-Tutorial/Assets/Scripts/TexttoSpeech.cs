@@ -12,33 +12,12 @@ public class TexttoSpeech : MonoBehaviour
     public AudioSource audioSource;
     public TMP_Text inputText;
     public VoiceName voiceName = VoiceName.enAUCatherine;
-    public static string CompleteText = string.Empty;
-    private string textToTextTranslated;
 
     public async void SpeechPlayback()
     {
         string msg = inputText.text;
         // Required to insure non-blocking code in the main Unity UI thread.
         await Task.Run(() => SpeakWithSDKPlugin(msg));
-        StartCoroutine(WaitForSpeaker());
-    }
-
-    IEnumerator WaitForSpeaker()
-    {
-        while (!audioSource.isPlaying)
-        {
-            yield return null;
-        }
-        StartCoroutine(ResetSpeaker());
-    }
-
-    IEnumerator ResetSpeaker()
-    {
-        while (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-            yield return null;
-        }
     }
 
     public void SpeakWithSDKPlugin(string message)
