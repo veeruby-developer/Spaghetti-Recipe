@@ -65,3 +65,24 @@ MonoBehaviour:
       id: 1
       description: Select
       axisConstraint: 2
+  - localizationKey: 
+    keyword: Start
+    keyCode: 0
+    action:
+      id: 1
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Next
+    keyCode: 0
+    action:
+      id: 1
+      description: Select
+      axisConstraint: 2
+  - localizationKey: 
+    keyword: Home
+    keyCode: 0
+    action:
+      id: 1
+      description: Select
+      axisConstraint: 2

@@ -1,0 +1,20 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19042) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 8029 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\2020.3.25f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker14
+-projectPath
+G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+-logFile
+Logs/AssetImportWorker14.log
+-srvPort
+59480
+Successfully changed project path to: G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial
+G:/Unity/Spaghetti Recipe Project/Spaghetti-Recipe/Spaghetti-Recipe-Tutorial

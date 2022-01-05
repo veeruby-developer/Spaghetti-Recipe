@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeAnchor : MonoBehaviour
 {
     public AnchorModuleScript anchorScript;
-    public GameObject mainMenuPanel;
+   // public GameObject mainMenuPanel;
     GameObject cube;
 
     bool isCreateAnchor, isRemoveAnchor, isFinAnchor,isCreateDone;
