@@ -49,6 +49,7 @@ public class SceneUIManager : MonoBehaviour
     int count;
 
     private static SaveSystem saveSystem;
+    public AnchorModuleScript anchorScript;
 
 
     #region Public Methods
@@ -85,10 +86,11 @@ public class SceneUIManager : MonoBehaviour
     //Recipe mode button function with popup messages
     public void StartRecipeMode()
     {
+        
         modePage.SetActive(false);
         anchorCube.SetActive(true);
         recipeInstructionPage.SetActive(true);
-
+        anchorScript.GetAzureAnchorIdFromDisk();
         Transform[] allChildren = anchorCube.GetComponentsInChildren<Transform>();
         foreach (Transform child in allChildren)
         {
