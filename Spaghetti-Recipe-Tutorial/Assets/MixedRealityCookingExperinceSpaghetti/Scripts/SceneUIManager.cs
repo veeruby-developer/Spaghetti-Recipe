@@ -48,6 +48,9 @@ public class SceneUIManager : MonoBehaviour
 
     int count;
 
+    private static SaveSystem saveSystem;
+
+
     #region Public Methods
 
     //Function for welcome panel button
@@ -126,13 +129,15 @@ public class SceneUIManager : MonoBehaviour
             if (count == 1)
             {
                 instructionSteps.text = insruction[count];
-                //(AudioDelay());
+                //StartCoroutine(AudioDelay());
                 anchorCube.SetActive(true);
                 stove.SetActive(true);
                 fridge.SetActive(false);
                 sauce.SetActive(false);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                Debug.Log(saveSystem);
+                saveSystem.LoadCollectabls();
 
             }
             if (count == 2)
@@ -145,17 +150,19 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(false);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                saveSystem.LoadCollectabls();
             }
             if (count == 3)
             {
                 instructionSteps.text = insruction[count];
-               // StartCoroutine(AudioDelay());
+                //StartCoroutine(AudioDelay());
                 anchorCube.SetActive(true);
                 stove.SetActive(false);
                 fridge.SetActive(false);
                 sauce.SetActive(true);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                saveSystem.LoadCollectabls();
             }
             if (count == 4)
             {
@@ -167,6 +174,7 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(false);
                 noodles.SetActive(true);
                 sink.SetActive(true);
+                saveSystem.LoadCollectabls();
             }
             if (count == 5)
             {
@@ -178,6 +186,7 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(false);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                saveSystem.LoadCollectabls();
             }
             count++;
         }
@@ -186,15 +195,17 @@ public class SceneUIManager : MonoBehaviour
 
     IEnumerator AudioDelay()
     {
-        yield return new WaitForSeconds(2);
+        audio.Stop();
+        yield return new WaitForSeconds(0);
         TexttoSpeech.instance.SpeechPlayback();
-        audio.Play();
+        //audio.Play();
     }
     #endregion
 
     #region private methods
     private void Start()
     {
+        saveSystem = gameObject.GetComponent<SaveSystem>();
         Debug.Log("length" + insruction.Length);
         count = 0;
         if (count == 0)

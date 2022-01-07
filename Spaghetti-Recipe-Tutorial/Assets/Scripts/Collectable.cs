@@ -30,6 +30,7 @@ public class Collectable : MonoBehaviour
         //if (PageNavigator.isEditor == true)
         //{
             SaveSystem.collectabls.Add(this);
+        //Debug.Log(transform.localPosition);
         //}
         //pointsText.text = points.ToString();
 

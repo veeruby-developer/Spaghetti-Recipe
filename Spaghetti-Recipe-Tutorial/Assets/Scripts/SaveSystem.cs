@@ -10,11 +10,10 @@ public class SaveSystem : MonoBehaviour
     const string COLLECTABLE_SUB = "/collectable";
     const string CCOLLECTABLE_COUNT_SUB = "/collectable.count";
     public static List<Collectable> collectabls = new List<Collectable>();
-
-    [SerializeField] Collectable collectableObject;
+    private Collectable collectableObject;
     //[SerializeField] bool isEditor;
 
-    //public GameObject pageNavigator;
+    public GameObject ParentGameObject;
 
     public void SaveCollectable()
     {
@@ -28,14 +27,16 @@ public class SaveSystem : MonoBehaviour
         formatter.Serialize(countStreem, collectabls.Count);
         
         countStreem.Close();
-        
+        Debug.Log(collectabls.Count);
         for (int i = 0; i < collectabls.Count; i++)
         {
             FileStream stream = new FileStream(path + i, FileMode.Create);
             CollectableDataClass data = new CollectableDataClass(collectabls[i]);
             formatter.Serialize(stream, data);
             stream.Close();
+            Debug.Log(data.size);
         }
+
         //PageNavigator.isEditor = false;
         //collectabls.Clear();
         //pageNavigator.GetComponent<PageNavigator>().clear.SetActive(false);
@@ -51,7 +52,6 @@ public class SaveSystem : MonoBehaviour
         string path = Application.persistentDataPath + COLLECTABLE_SUB + SceneManager.GetActiveScene().buildIndex;
         string countPath = Application.persistentDataPath + CCOLLECTABLE_COUNT_SUB + SceneManager.GetActiveScene().buildIndex;
         int collectablesCound = 0;
-
         if (File.Exists(countPath))
         {
             FileStream countStreem = new FileStream(countPath, FileMode.Open);
@@ -72,15 +72,17 @@ public class SaveSystem : MonoBehaviour
                 stream.Close();
 
                 Vector3 size = new Vector3(data.size[0], data.size[1], data.size[2]);
+                Debug.Log(size.x);
+                Debug.Log(size.y);
+                Debug.Log(size.z);
 
-                Collectable collectable = Instantiate(collectableObject, transform.position, Quaternion.identity);
-                collectable.transform.localPosition = size;
-                //collectable.points = data.points;
-                //collectable.pointsText.text = data.points.ToString();
-                collectable.modelName = data.modelName;
-                //collectable.anchorName = data.anchorName;
-                //collectable.isAnchored = data.isAnchored;
-                collectable.transform.Find(collectable.modelName).transform.gameObject.SetActive(true);
+                for (int j=0; j < 4; j++)
+                {
+                    if (data.name == ParentGameObject.transform.GetChild(j).gameObject.name)
+                    {
+                        ParentGameObject.transform.GetChild(j).gameObject.transform.localPosition = size;
+                    }
+                }
             }
             else
             {

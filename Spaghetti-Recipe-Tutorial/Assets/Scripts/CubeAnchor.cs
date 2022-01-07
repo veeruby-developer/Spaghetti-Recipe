@@ -60,6 +60,7 @@ public class CubeAnchor : MonoBehaviour
         if (anchorScript.isStart == true && isFinAnchor == true)
         {
             Debug.Log("Anchor start " + anchorScript.isStart);
+            anchorScript.GetAzureAnchorIdFromDisk();
             anchorScript.FindAzureAnchor();
             anchorScript.isStart = false;
         }
