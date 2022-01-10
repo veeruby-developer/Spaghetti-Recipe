@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New MixedRealitySpeechCommandsProfile
   m_EditorClassIdentifier: 
   isCustomProfile: 1
-  startBehavior: 0
+  startBehavior: 1
   recognitionConfidenceLevel: 1
   speechCommands:
   - localizationKey: 
