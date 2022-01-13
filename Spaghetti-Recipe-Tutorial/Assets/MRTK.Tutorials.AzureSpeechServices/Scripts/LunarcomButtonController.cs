@@ -8,13 +8,13 @@ public class LunarcomButtonController : MonoBehaviour
     [Header("Reference Objects")]
     public RecognitionMode speechRecognitionMode = RecognitionMode.Disabled;
 
-    [Space(6)]
-    [Header("Button States")]
-    public Sprite Default;
-    public Sprite Activated;
+    //[Space(6)]
+    //[Header("Button States")]
+    //public Sprite Default;
+    //public Sprite Activated;
 
     private Button button;
-    private bool isSelected = false;
+    //private bool isSelected = false;
 
     private LunarcomController lunarcomController;
 
@@ -24,10 +24,10 @@ public class LunarcomButtonController : MonoBehaviour
         button = GetComponent<Button>();
     }
 
-    public bool GetIsSelected()
-    {
-        return isSelected;
-    }
+    //public bool GetIsSelected()
+    //{
+    //    return isSelected;
+    //}
 
     public void ToggleSelected()
     {
@@ -37,8 +37,8 @@ public class LunarcomButtonController : MonoBehaviour
         //}
         //else
         //{
-            button.image.sprite = Activated;
-            isSelected = true;
+            //button.image.sprite = Activated;
+            //isSelected = true;
             //lunarcomController.SetActiveButton(GetComponent<LunarcomButtonController>());
 
             if (lunarcomController.IsOfflineMode())
@@ -51,15 +51,15 @@ public class LunarcomButtonController : MonoBehaviour
         //}
     }
 
-    public void ShowNotSelected()
-    {
-        button.image.sprite = Default;
-        isSelected = false;
-    }
+    //public void ShowNotSelected()
+    //{
+    //    button.image.sprite = Default;
+    //    isSelected = false;
+    //}
 
     public void DeselectButton()
     {
-        ShowNotSelected();
+        //ShowNotSelected();
         lunarcomController.SelectMode(RecognitionMode.Disabled);
     }
 }

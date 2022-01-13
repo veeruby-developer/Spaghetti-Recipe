@@ -251,10 +251,10 @@ public class LunarcomIntentRecognizer : MonoBehaviour
             {
                 foreach (LunarcomButtonController button in lunarcomController.buttons)
                 {
-                    if (button.GetIsSelected())
-                    {
-                        button.DeselectButton();
-                    }
+                    //if (button.GetIsSelected())
+                    //{
+                    //    button.DeselectButton();
+                    //}
                 }
                 commandCaptured = false;
             }

@@ -89,15 +89,15 @@ public class LunarcomController : MonoBehaviour
         }
         
 
-        if (GetComponent<LunarcomTranslationRecognizer>())
-        {
-            ActivateButtonNamed("SatelliteButton");
-        }
+        //if (GetComponent<LunarcomTranslationRecognizer>())
+        //{
+        //    ActivateButtonNamed("SatelliteButton");
+        //}
 
-        if (GetComponent<LunarcomIntentRecognizer>())
-        {
-            ActivateButtonNamed("RocketButton");
-        }
+        //if (GetComponent<LunarcomIntentRecognizer>())
+        //{
+        //    ActivateButtonNamed("RocketButton");
+        //}
 
         //ShowConnected(true);
     }
@@ -118,16 +118,16 @@ public class LunarcomController : MonoBehaviour
         {
             GetComponent<LunarcomSpeechRecognizer>().enabled = false;
         }
-        if (GetComponent<LunarcomTranslationRecognizer>())
-        {
-            GetComponent<LunarcomTranslationRecognizer>().enabled = false;
-            ActivateButtonNamed("SatelliteButton", false);
-        }
-        if (GetComponent<LunarcomIntentRecognizer>())
-        {
-            GetComponent<LunarcomIntentRecognizer>().enabled = false;
-            ActivateButtonNamed("RocketButton", false);
-        }
+        //if (GetComponent<LunarcomTranslationRecognizer>())
+        //{
+        //    GetComponent<LunarcomTranslationRecognizer>().enabled = false;
+        //    ActivateButtonNamed("SatelliteButton", false);
+        //}
+        //if (GetComponent<LunarcomIntentRecognizer>())
+        //{
+        //    GetComponent<LunarcomIntentRecognizer>().enabled = false;
+        //    ActivateButtonNamed("RocketButton", false);
+        //}
 
         //ShowConnected(false);
     }
@@ -147,17 +147,17 @@ public class LunarcomController : MonoBehaviour
         return speechRecognitionMode;
     }
 
-    public void SetActiveButton(LunarcomButtonController buttonToSetActive)
-    {
-        activeButton = buttonToSetActive;
-        foreach (LunarcomButtonController button in buttons)
-        {
-            if (button != activeButton && button.GetIsSelected())
-            {
-                button.ShowNotSelected();
-            }
-        }
-    }
+    //public void SetActiveButton(LunarcomButtonController buttonToSetActive)
+    //{
+    //    activeButton = buttonToSetActive;
+    //    foreach (LunarcomButtonController button in buttons)
+    //    {
+    //        if (button != activeButton && button.GetIsSelected())
+    //        {
+    //            button.ShowNotSelected();
+    //        }
+    //    }
+    //}
 
     public void SelectMode(RecognitionMode speechRecognitionModeToSet)
     {
