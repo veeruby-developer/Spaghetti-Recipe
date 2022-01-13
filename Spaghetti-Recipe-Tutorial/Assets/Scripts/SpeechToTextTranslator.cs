@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 public class SpeechToTextTranslator : MonoBehaviour
 {
-    public Text InputTextField;
+    [Header("Speech SDK Credentials")]
+    public string SpeechServiceAPIKey = "";
+    public string SpeechServiceRegion = "";
+
+    public Text inputText;
 
     private object threadLocker = new object();
     private bool waitingForReco;
     private string message;
     private string inputMessage;
-    private TranslationRecognizer translator;
+    private TranslationRecognizer speechTranslator;
 
     private string translatedString = "";
-
-    public static string targetLanguage = "en-US";
     public static string sourceLanguage = "en-US";
 
     public static string completeTranslatedText = string.Empty;
     public static string completeRegonizedText = string.Empty;
-
-    public static string completeTranslatedTextForHistory = string.Empty;
-    public static string completeRecognizedTextForHistory = string.Empty;
 
     public static string micStatus = "on";
 
@@ -62,7 +61,6 @@ public class SpeechToTextTranslator : MonoBehaviour
             }
             completeRegonizedText = completeRegonizedText ==string.Empty ? e.Result.Text : completeRegonizedText + " " + e.Result.Text;
             inputMessage = completeRegonizedText;
-            completeRecognizedTextForHistory = completeRecognizedTextForHistory == string.Empty ? e.Result.Text : completeRecognizedTextForHistory + " " + e.Result.Text;
             foreach (var element in e.Result.Translations)
             {
                 translatedString = element.Value;
@@ -70,7 +68,6 @@ public class SpeechToTextTranslator : MonoBehaviour
             lock (threadLocker)
             {
                 completeTranslatedText = completeTranslatedText == string.Empty ? translatedString : completeTranslatedText + " " + translatedString;
-                completeTranslatedTextForHistory = completeTranslatedTextForHistory == string.Empty ? translatedString : completeTranslatedTextForHistory + " " + translatedString;
                 message = completeTranslatedText;
                 waitingForReco = false;
             }
@@ -84,8 +81,6 @@ public class SpeechToTextTranslator : MonoBehaviour
         message = "Translation";
         completeRegonizedText = string.Empty;
         completeTranslatedText = string.Empty;
-        completeRecognizedTextForHistory = string.Empty;
-        completeTranslatedTextForHistory = string.Empty;
     }
 
     private void HandleTranslatorCanceled(object s, TranslationRecognitionEventArgs e)
@@ -123,32 +118,30 @@ public class SpeechToTextTranslator : MonoBehaviour
     {
         inputMessage = "Speak.....";
         message = "Waiting for Translation.......";
-        SpeechTranslationConfig config = SpeechTranslationConfig.FromSubscription("d30f369d26f44b5887f964358928ef8b", "eastus2");
+        SpeechTranslationConfig config = SpeechTranslationConfig.FromSubscription(SpeechServiceAPIKey, SpeechServiceRegion);
         config.SpeechRecognitionLanguage = sourceLanguage;
         stopRecognition = new TaskCompletionSource<int>();
-        config.AddTargetLanguage(targetLanguage);
-        using (translator = new TranslationRecognizer(config))
+        config.AddTargetLanguage(sourceLanguage);
+        using (speechTranslator = new TranslationRecognizer(config))
         {
             lock (threadLocker)
             {
                 waitingForReco = true;
             }
-
-            if (translator != null)
+            if (speechTranslator != null)
             {
-                translator.Recognizing += HandleTranslatorRecognizing;
-                translator.Recognized += HandleTranslatorRecognized;
-                translator.Canceled += HandleTranslatorCanceled;
-                translator.SessionStarted += HandleTranslatorSessionStarted;
-                translator.SessionStopped += HandleTranslatorSessionStopped;
+                speechTranslator.Recognizing += HandleTranslatorRecognizing;
+                speechTranslator.Recognized += HandleTranslatorRecognized;
+                speechTranslator.Canceled += HandleTranslatorCanceled;
+                speechTranslator.SessionStarted += HandleTranslatorSessionStarted;
+                speechTranslator.SessionStopped += HandleTranslatorSessionStopped;
             }
             inputMessage = "Speak.....";
             message = "Waiting for Translation.......";
-            await translator.StartContinuousRecognitionAsync().ConfigureAwait(false);
+            await speechTranslator.StartContinuousRecognitionAsync().ConfigureAwait(false);
 
             Task.WaitAny(new[] { stopRecognition.Task });    
-            await translator.StopContinuousRecognitionAsync();
-
+            await speechTranslator.StopContinuousRecognitionAsync();
         }
     }
 
@@ -180,7 +173,7 @@ public class SpeechToTextTranslator : MonoBehaviour
     {
         lock (threadLocker)
         {         
-                InputTextField.text = inputMessage;
+                inputText.text = inputMessage;
         }        
     }
 }
