@@ -16,8 +16,8 @@ public class LunarcomController : MonoBehaviour
     public string SpeechServiceRegion = "";
 
     [Header("Object References")]
-    public GameObject terminal;
-    public ConnectionLightController connectionLight;
+    //public GameObject terminal;
+    //public ConnectionLightController connectionLight;
     public TMP_Text outputText;
     public List<LunarcomButtonController> buttons;
 
@@ -99,7 +99,7 @@ public class LunarcomController : MonoBehaviour
             ActivateButtonNamed("RocketButton");
         }
 
-        ShowConnected(true);
+        //ShowConnected(true);
     }
 
     private void SetupOfflineMode()
@@ -129,7 +129,7 @@ public class LunarcomController : MonoBehaviour
             ActivateButtonNamed("RocketButton", false);
         }
 
-        ShowConnected(false);
+        //ShowConnected(false);
     }
 
     private void ActivateButtonNamed(string name, bool makeActive = true) {
@@ -172,33 +172,33 @@ public class LunarcomController : MonoBehaviour
         }
     }
 
-    public void ShowConnected(bool showConnected)
-    {
-        connectionLight.ShowConnected(showConnected);
-    }
+    //public void ShowConnected(bool showConnected)
+    //{
+    //    connectionLight.ShowConnected(showConnected);
+    //}
 
-    public void ShowTerminal()
-    {
-        terminal.SetActive(true);
-    }
+    //public void ShowTerminal()
+    //{
+    //    terminal.SetActive(true);
+    //}
 
-    public void HideTerminal()
-    {
-        if (terminal.activeSelf)
-        {
-            foreach (LunarcomButtonController button in buttons)
-            {
-                if (button.GetIsSelected())
-                {
-                    button.ShowNotSelected();
-                }
-            }
+    //public void HideTerminal()
+    //{
+    //    if (terminal.activeSelf)
+    //    {
+    //        foreach (LunarcomButtonController button in buttons)
+    //        {
+    //            if (button.GetIsSelected())
+    //            {
+    //                button.ShowNotSelected();
+    //            }
+    //        }
 
-            outputText.text = "Select a mode to begin.";
-            terminal.SetActive(false);
-            SelectMode(RecognitionMode.Disabled);
-        }
-    }
+    //        outputText.text = "Select a mode to begin.";
+    //        terminal.SetActive(false);
+    //        SelectMode(RecognitionMode.Disabled);
+    //    }
+    //}
 
     public void UpdateLunarcomText(string textToUpdate)
     {

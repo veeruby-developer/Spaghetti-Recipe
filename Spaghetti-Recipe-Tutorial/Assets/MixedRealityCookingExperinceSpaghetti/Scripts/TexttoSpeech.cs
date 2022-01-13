@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System;
 using Microsoft.Azure.SpatialAnchors.Unity;
 using TMPro;
+using UnityEngine.UI;
 
 public class TexttoSpeech : MonoBehaviour
 {
     public static TexttoSpeech instance;
     public AudioSource audioSource;
-    public TMP_Text inputText;
+    public Text inputText;
     public VoiceName voiceName = VoiceName.enAUCatherine;
 
     private void Start()

@@ -158,6 +158,7 @@ RectTransform:
   - {fileID: 1164684476}
   - {fileID: 591461986}
   - {fileID: 1930932530}
+  - {fileID: 453331815}
   m_Father: {fileID: 1126662888}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -271,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &76169740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1716257550}
-  inputText: {fileID: 2006156811}
+  inputText: {fileID: 0}
   voiceName: 33
 --- !u!114 &76169743
 MonoBehaviour:
@@ -520,6 +521,85 @@ RectTransform:
   m_AnchoredPosition: {x: -6.8, y: 15.3}
   m_SizeDelta: {x: 442.4, y: 211.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &453331812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453331815}
+  - component: {fileID: 453331814}
+  - component: {fileID: 453331813}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &453331813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453331812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &453331814
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453331812}
+  m_CullTransparentMesh: 1
+--- !u!224 &453331815
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453331812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 33667483}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.2, y: 111.3}
+  m_SizeDelta: {x: 992.1, y: 768.7}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &497181047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 497181047, guid: 996be616968f40141a97553a4ccebbce, type: 3}
@@ -558,7 +638,6 @@ GameObject:
   - component: {fileID: 591461989}
   - component: {fileID: 591461988}
   - component: {fileID: 591461987}
-  - component: {fileID: 591461990}
   m_Layer: 5
   m_Name: Mic Button
   m_TagString: Untagged
@@ -629,21 +708,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 591461990}
-        m_TargetAssemblyTypeName: LunarcomButtonController, Assembly-CSharp
-        m_MethodName: ToggleSelected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1126662892}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
+      - m_Target: {fileID: 1126662889}
+        m_TargetAssemblyTypeName: SpeechToTextTranslator, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -691,21 +758,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591461985}
   m_CullTransparentMesh: 1
---- !u!114 &591461990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591461985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d74d5a294108f43f8beb94bd15190979, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speechRecognitionMode: 0
-  Default: {fileID: 0}
-  Activated: {fileID: 0}
 --- !u!114 &723607589 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2122781910992175558, guid: 996be616968f40141a97553a4ccebbce, type: 3}
@@ -884,7 +936,6 @@ GameObject:
   - component: {fileID: 1126662886}
   - component: {fileID: 1126662885}
   - component: {fileID: 1126662892}
-  - component: {fileID: 1126662891}
   - component: {fileID: 1126662890}
   - component: {fileID: 1126662889}
   m_Layer: 0
@@ -893,7 +944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1126662885
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -981,9 +1032,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1126662884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3985d65531502340bdfef76ff037a72, type: 3}
+  m_Script: {fileID: 11500000, guid: 8aef1aa7fe820b94086277bf1052d548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outputText: {fileID: 453331813}
+  InputTextField: {fileID: 453331813}
+  waitingForReco: 0
+  message: 
+  inputMessage: 
+  translatedString: 
+  textcontainer: {fileID: 0}
+  HistoryTextContainer: {fileID: 0}
+  FromHistoryTextContainer: {fileID: 0}
+  fromdropdown: {fileID: 0}
+  todropdown: {fileID: 0}
+  timeTextObject: {fileID: 0}
+  historyTextObject: {fileID: 0}
+  fromTimeTextObject: {fileID: 0}
+  fromHistoryTextObject: {fileID: 0}
+  micPermissionGranted: 0
 --- !u!114 &1126662890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,27 +1064,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1716257550}
-  inputText: {fileID: 1164684477}
+  inputText: {fileID: 453331813}
   voiceName: 33
---- !u!114 &1126662891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1126662884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf3e71ff76a64ce6a63dc8529f51307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeechServiceAPIKey: a0d0cfba77c84a7e95383e99a90495c0
-  SpeechServiceRegion: centralindia
-  terminal: {fileID: 1694537129}
-  connectionLight: {fileID: 1694537128}
-  outputText: {fileID: 1164684477}
-  buttons:
-  - {fileID: 591461990}
 --- !u!82 &1126662892
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1131,7 +1179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1164684476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1481,7 +1529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171862057520122734, guid: 526c157bfa0eee74e8ba738651b3994d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526c157bfa0eee74e8ba738651b3994d, type: 3}
@@ -1597,22 +1645,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1694537128 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 171862056804036062, guid: 526c157bfa0eee74e8ba738651b3994d, type: 3}
-  m_PrefabInstance: {fileID: 1694537122}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96df2ce3edc545048a0357b6a648cfb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1694537129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 171862056317093181, guid: 526c157bfa0eee74e8ba738651b3994d, type: 3}
-  m_PrefabInstance: {fileID: 1694537122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1694537130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,8 +1671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeechServiceAPIKey: a0d0cfba77c84a7e95383e99a90495c0
   SpeechServiceRegion: centralindia
-  terminal: {fileID: 1694537129}
-  connectionLight: {fileID: 1694537128}
   outputText: {fileID: 369720700}
   buttons:
   - {fileID: 1694537126}
@@ -1662,7 +1692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1716257550}
-  inputText: {fileID: 369720700}
+  inputText: {fileID: 0}
   voiceName: 33
 --- !u!1 &1716257543
 GameObject:

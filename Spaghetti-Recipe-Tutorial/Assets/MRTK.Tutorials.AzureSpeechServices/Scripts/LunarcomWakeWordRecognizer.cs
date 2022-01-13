@@ -36,7 +36,7 @@ public class LunarcomWakeWordRecognizer : MonoBehaviour
             {
                 if (WakeWord != "" && WakeWord != "*")
                 {
-                    lunarcomController.ShowTerminal();
+                    //lunarcomController.ShowTerminal();
                     BeginRecognizing();
                 }
             }
@@ -45,7 +45,7 @@ public class LunarcomWakeWordRecognizer : MonoBehaviour
         {
             if (WakeWord != "" && WakeWord != "*")
             {
-                lunarcomController.ShowTerminal();
+                //lunarcomController.ShowTerminal();
                 BeginRecognizing();
             }
         }
@@ -91,20 +91,20 @@ public class LunarcomWakeWordRecognizer : MonoBehaviour
 
     private void Update()
     {
-        if (lunarcomController.terminal.activeSelf)
-        {
-            if (recognizedString.ToLower().Contains(DismissWord.ToLower()))
-            {
-                lunarcomController.HideTerminal();
-            }
-        }
-        else
-        {
-            if (recognizedString.ToLower().Contains(WakeWord.ToLower()))
-            {
-                lunarcomController.ShowTerminal();
-            }
-        }
+        //if (lunarcomController.terminal.activeSelf)
+        //{
+        //    if (recognizedString.ToLower().Contains(DismissWord.ToLower()))
+        //    {
+        //        lunarcomController.HideTerminal();
+        //    }
+        //}
+        //else
+        //{
+        //    if (recognizedString.ToLower().Contains(WakeWord.ToLower()))
+        //    {
+        //        lunarcomController.ShowTerminal();
+        //    }
+        //}
     }
 
     void OnDestroy()
