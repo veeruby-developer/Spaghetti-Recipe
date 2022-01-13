@@ -89,29 +89,29 @@ public class LunarcomWakeWordRecognizer : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        //if (lunarcomController.terminal.activeSelf)
-        //{
-        //    if (recognizedString.ToLower().Contains(DismissWord.ToLower()))
-        //    {
-        //        lunarcomController.HideTerminal();
-        //    }
-        //}
-        //else
-        //{
-        //    if (recognizedString.ToLower().Contains(WakeWord.ToLower()))
-        //    {
-        //        lunarcomController.ShowTerminal();
-        //    }
-        //}
-    }
+    //private void Update()
+    //{
+    //    //if (lunarcomController.terminal.activeSelf)
+    //    //{
+    //    //    if (recognizedString.ToLower().Contains(DismissWord.ToLower()))
+    //    //    {
+    //    //        lunarcomController.HideTerminal();
+    //    //    }
+    //    //}
+    //    //else
+    //    //{
+    //    //    if (recognizedString.ToLower().Contains(WakeWord.ToLower()))
+    //    //    {
+    //    //        lunarcomController.ShowTerminal();
+    //    //    }
+    //    //}
+    //}
 
-    void OnDestroy()
-    {
-        if (recognizer != null)
-        {
-            recognizer.Dispose();
-        }
-    }
+    //void OnDestroy()
+    //{
+    //    if (recognizer != null)
+    //    {
+    //        recognizer.Dispose();
+    //    }
+    //}
 }

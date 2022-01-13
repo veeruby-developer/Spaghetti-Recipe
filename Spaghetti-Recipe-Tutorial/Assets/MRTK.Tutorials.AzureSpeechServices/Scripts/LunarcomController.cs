@@ -44,80 +44,80 @@ public class LunarcomController : MonoBehaviour
         {
             lunarcomWakeWordRecognizer = GetComponent<LunarcomWakeWordRecognizer>();
         }
-        if (GetComponent<LunarcomOfflineRecognizer>())
-        {
-            lunarcomOfflineRecognizer = GetComponent<LunarcomOfflineRecognizer>();
-            if (lunarcomOfflineRecognizer.simulateOfflineMode == SimuilateOfflineMode.Disabled)
-            {
-                SetupOnlineMode();
-            }
-            else
-            {
-                SetupOfflineMode();
-            }
-        } else
-        {
-            SetupOnlineMode();
-        }
+        //if (GetComponent<LunarcomOfflineRecognizer>())
+        //{
+        //    lunarcomOfflineRecognizer = GetComponent<LunarcomOfflineRecognizer>();
+        //    if (lunarcomOfflineRecognizer.simulateOfflineMode == SimuilateOfflineMode.Disabled)
+        //    {
+        //        //SetupOnlineMode();
+        //    }
+        //    else
+        //    {
+        //        //SetupOfflineMode();
+        //    }
+        //} else
+        //{
+        //    //SetupOnlineMode();
+        //}
     }
 
-    public bool IsOfflineMode()
-    {
-        if (lunarcomOfflineRecognizer != null)
-        {
-            return lunarcomOfflineRecognizer.simulateOfflineMode == SimuilateOfflineMode.Enabled;
-        } else
-        {
-            return false;
-        }
-    }
+    //public bool IsOfflineMode()
+    //{
+    //    if (lunarcomOfflineRecognizer != null)
+    //    {
+    //        return lunarcomOfflineRecognizer.simulateOfflineMode == SimuilateOfflineMode.Enabled;
+    //    } else
+    //    {
+    //        return false;
+    //    }
+    //}
 
-    private void SetupOnlineMode()
-    {
-        if (lunarcomWakeWordRecognizer != null)
-        {
-            if (lunarcomWakeWordRecognizer.WakeWord == "")
-            {
-                lunarcomWakeWordRecognizer.WakeWord = "*";
-                lunarcomWakeWordRecognizer.DismissWord = "*";
-            }
+    //private void SetupOnlineMode()
+    //{
+    //    if (lunarcomWakeWordRecognizer != null)
+    //    {
+    //        if (lunarcomWakeWordRecognizer.WakeWord == "")
+    //        {
+    //            lunarcomWakeWordRecognizer.WakeWord = "*";
+    //            lunarcomWakeWordRecognizer.DismissWord = "*";
+    //        }
 
-            if (lunarcomWakeWordRecognizer.DismissWord == "")
-            {
-                lunarcomWakeWordRecognizer.DismissWord = "*";
-            }
-        }
+    //        if (lunarcomWakeWordRecognizer.DismissWord == "")
+    //        {
+    //            lunarcomWakeWordRecognizer.DismissWord = "*";
+    //        }
+    //    }
         
 
-        //if (GetComponent<LunarcomTranslationRecognizer>())
-        //{
-        //    ActivateButtonNamed("SatelliteButton");
-        //}
+    //    //if (GetComponent<LunarcomTranslationRecognizer>())
+    //    //{
+    //    //    ActivateButtonNamed("SatelliteButton");
+    //    //}
 
-        //if (GetComponent<LunarcomIntentRecognizer>())
-        //{
-        //    ActivateButtonNamed("RocketButton");
-        //}
+    //    //if (GetComponent<LunarcomIntentRecognizer>())
+    //    //{
+    //    //    ActivateButtonNamed("RocketButton");
+    //    //}
 
-        //ShowConnected(true);
-    }
+    //    //ShowConnected(true);
+    //}
 
-    private void SetupOfflineMode()
-    {
-        if (lunarcomWakeWordRecognizer != null)
-        {
-            lunarcomWakeWordRecognizer.WakeWord = "*";
-            lunarcomWakeWordRecognizer.DismissWord = "*";
-        }
+    //private void SetupOfflineMode()
+    //{
+    //    if (lunarcomWakeWordRecognizer != null)
+    //    {
+    //        lunarcomWakeWordRecognizer.WakeWord = "*";
+    //        lunarcomWakeWordRecognizer.DismissWord = "*";
+    //    }
         
-        if (GetComponent<LunarcomWakeWordRecognizer>())
-        {
-            GetComponent<LunarcomWakeWordRecognizer>().enabled = false;
-        }
-        if (GetComponent<LunarcomSpeechRecognizer>())
-        {
-            GetComponent<LunarcomSpeechRecognizer>().enabled = false;
-        }
+    //    if (GetComponent<LunarcomWakeWordRecognizer>())
+    //    {
+    //        GetComponent<LunarcomWakeWordRecognizer>().enabled = false;
+    //    }
+    //    if (GetComponent<LunarcomSpeechRecognizer>())
+    //    {
+    //        GetComponent<LunarcomSpeechRecognizer>().enabled = false;
+    //    }
         //if (GetComponent<LunarcomTranslationRecognizer>())
         //{
         //    GetComponent<LunarcomTranslationRecognizer>().enabled = false;
@@ -130,17 +130,17 @@ public class LunarcomController : MonoBehaviour
         //}
 
         //ShowConnected(false);
-    }
+    //}
 
-    private void ActivateButtonNamed(string name, bool makeActive = true) {
-        foreach (LunarcomButtonController button in buttons)
-        {
-            if (button.gameObject.name == name)
-            {
-                button.gameObject.SetActive(makeActive);
-            }
-        }
-    }
+    //private void ActivateButtonNamed(string name, bool makeActive = true) {
+    //    foreach (LunarcomButtonController button in buttons)
+    //    {
+    //        if (button.gameObject.name == name)
+    //        {
+    //            button.gameObject.SetActive(makeActive);
+    //        }
+    //    }
+    //}
 
     public RecognitionMode CurrentRecognitionMode()
     {

@@ -710,7 +710,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1126662889}
         m_TargetAssemblyTypeName: SpeechToTextTranslator, Assembly-CSharp
-        m_MethodName: ButtonClick
+        m_MethodName: MicOnStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -827,8 +827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechRecognitionMode: 0
-  Default: {fileID: 21300000, guid: 843492ec4b63f4b6291e10119da272fa, type: 3}
-  Activated: {fileID: 21300000, guid: 0586f7cf3d0404aa786894b335381abd, type: 3}
 --- !u!114 &1032797985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1126662885
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1035,22 +1033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aef1aa7fe820b94086277bf1052d548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 453331813}
   InputTextField: {fileID: 453331813}
-  waitingForReco: 0
-  message: 
-  inputMessage: 
-  translatedString: 
-  textcontainer: {fileID: 0}
-  HistoryTextContainer: {fileID: 0}
-  FromHistoryTextContainer: {fileID: 0}
-  fromdropdown: {fileID: 0}
-  todropdown: {fileID: 0}
-  timeTextObject: {fileID: 0}
-  historyTextObject: {fileID: 0}
-  fromTimeTextObject: {fileID: 0}
-  fromHistoryTextObject: {fileID: 0}
-  micPermissionGranted: 0
 --- !u!114 &1126662890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,7 +1512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 171862057520122734, guid: 526c157bfa0eee74e8ba738651b3994d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526c157bfa0eee74e8ba738651b3994d, type: 3}

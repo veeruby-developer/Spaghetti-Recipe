@@ -41,13 +41,13 @@ public class LunarcomButtonController : MonoBehaviour
             //isSelected = true;
             //lunarcomController.SetActiveButton(GetComponent<LunarcomButtonController>());
 
-            if (lunarcomController.IsOfflineMode())
-            {
-                lunarcomController.SelectMode(RecognitionMode.Offline);
-            } else
-            {
+            //if (lunarcomController.IsOfflineMode())
+            //{
+            //    lunarcomController.SelectMode(RecognitionMode.Offline);
+            //} else
+            //{
                 lunarcomController.SelectMode(speechRecognitionMode);
-            }
+            //}
         //}
     }
 
@@ -57,9 +57,9 @@ public class LunarcomButtonController : MonoBehaviour
     //    isSelected = false;
     //}
 
-    public void DeselectButton()
-    {
-        //ShowNotSelected();
-        lunarcomController.SelectMode(RecognitionMode.Disabled);
-    }
+    //public void DeselectButton()
+    //{
+    //    //ShowNotSelected();
+    //    lunarcomController.SelectMode(RecognitionMode.Disabled);
+    //}
 }
