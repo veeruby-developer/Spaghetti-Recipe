@@ -4,7 +4,7 @@ using Microsoft.CognitiveServices.Speech;
 using CognitiveServicesTTS;
 using System.Threading.Tasks;
 using System;
-using Microsoft.Azure.SpatialAnchors.Unity;
+//using Microsoft.Azure.SpatialAnchors.Unity;
 using UnityEngine.UI;
 
 public class TexttoSpeech : MonoBehaviour
