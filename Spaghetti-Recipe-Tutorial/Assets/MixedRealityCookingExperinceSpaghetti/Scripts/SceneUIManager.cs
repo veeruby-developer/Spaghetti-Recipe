@@ -35,10 +35,7 @@ public class SceneUIManager : MonoBehaviour
     [Tooltip("Recipe steps")]
     [SerializeField] public string[] insruction;
 
-    [Header("Audio")]
-    [Tooltip("Audio source")]
-    [SerializeField] public AudioSource audio;
-
+    
     [Header("ToolTip Objects")]
     [SerializeField] public GameObject stove;
     [SerializeField] public GameObject fridge;
@@ -50,12 +47,14 @@ public class SceneUIManager : MonoBehaviour
 
     #region Public Methods
 
-    //Function for welcome panel button
+    //Loading mode page
     public void LoadMainMenu()
     {
         mainPage.SetActive(false);
         modePage.SetActive(true);
     }
+
+    //Loading mode page
     public void HomeFunction()
     {
         anchorCube.SetActive(false);
@@ -65,13 +64,14 @@ public class SceneUIManager : MonoBehaviour
         modePage.SetActive(true);
     }
 
-    //Setup mode button function with popup messages
+    //Setup mode button function
     public void StartSetupMode()
     {
         modePage.SetActive(false);
         instructionPage.SetActive(true);
     }
 
+    //Function for instruction page 
     public void InstructionPageFunction()
     {
         instructionPage.SetActive(false);
@@ -79,23 +79,21 @@ public class SceneUIManager : MonoBehaviour
         togglePage.SetActive(true);
     }
 
-    //Recipe mode button function with popup messages
+    //Recipe mode button function
     public void StartRecipeMode()
     {
         modePage.SetActive(false);
         anchorCube.SetActive(true);
         recipeInstructionPage.SetActive(true);
 
+        //Finds all the children anchor of cube and making it disable in recipe mode , hence it will be enable according to the flow
         Transform[] allChildren = anchorCube.GetComponentsInChildren<Transform>();
         foreach (Transform child in allChildren)
         {
             if(child.tag == "Child")
             {
                 child.gameObject.SetActive(false);
-                //child.GetComponent<>
             }
-            
-
         }
     }
     
@@ -112,21 +110,22 @@ public class SceneUIManager : MonoBehaviour
         eyeMessage.text = "This mode helps you to cook the recipe";
         eyeMessagePanel.SetActive(true);
     }
+
+    //Function for disabling the eyegaze
     public void DisableEyeTracking()
     {
         eyeMessagePanel.SetActive(false);
     }
 
+    //Next function for recipe mode
     public void NextFunction()
     {
-        
         if (count < insruction.Length)
         {
             Debug.Log("Count = " + count);
             if (count == 1)
             {
                 instructionSteps.text = insruction[count];
-                //(AudioDelay());
                 anchorCube.SetActive(true);
                 stove.SetActive(true);
                 fridge.SetActive(false);
@@ -138,7 +137,6 @@ public class SceneUIManager : MonoBehaviour
             if (count == 2)
             {
                 instructionSteps.text = insruction[count];
-                //StartCoroutine(AudioDelay());
                 anchorCube.SetActive(true);
                 stove.SetActive(false);
                 fridge.SetActive(true);
@@ -149,7 +147,6 @@ public class SceneUIManager : MonoBehaviour
             if (count == 3)
             {
                 instructionSteps.text = insruction[count];
-               // StartCoroutine(AudioDelay());
                 anchorCube.SetActive(true);
                 stove.SetActive(false);
                 fridge.SetActive(false);
@@ -160,7 +157,6 @@ public class SceneUIManager : MonoBehaviour
             if (count == 4)
             {
                 instructionSteps.text = insruction[count];
-                //StartCoroutine(AudioDelay());
                 anchorCube.SetActive(true);
                 stove.SetActive(true);
                 fridge.SetActive(false);
@@ -171,7 +167,6 @@ public class SceneUIManager : MonoBehaviour
             if (count == 5)
             {
                 instructionSteps.text = insruction[count];
-                //StartCoroutine(AudioDelay());
                 anchorCube.SetActive(true);
                 stove.SetActive(true);
                 fridge.SetActive(false);
@@ -181,18 +176,12 @@ public class SceneUIManager : MonoBehaviour
             }
             count++;
         }
-
     }
 
-    IEnumerator AudioDelay()
-    {
-        yield return new WaitForSeconds(2);
-        TexttoSpeech.instance.SpeechPlayback();
-        audio.Play();
-    }
     #endregion
 
     #region private methods
+    //Initial method to display starting message stored in array
     private void Start()
     {
         Debug.Log("length" + insruction.Length);

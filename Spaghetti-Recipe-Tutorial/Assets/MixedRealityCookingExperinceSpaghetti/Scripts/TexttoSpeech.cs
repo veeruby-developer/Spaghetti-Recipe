@@ -13,6 +13,7 @@ public class TexttoSpeech : MonoBehaviour
     public AudioSource audioSource;
     public TMP_Text inputText;
     public VoiceName voiceName = VoiceName.enAUCatherine;
+    public int frequency = 16500;
 
     private void Start()
     {
@@ -60,7 +61,7 @@ public class TexttoSpeech : MonoBehaviour
             Debug.Log($"Speech synthesized for text and the audio was written to output stream.");
 
             int sampleCount = 0;
-            int frequency = 18000;
+            //frequency = 18000;
             var unityData = FixedRAWAudioToUnityAudio(audiodata, 1, 16, out sampleCount);
 
             // Convert data to a Unity audio clip
