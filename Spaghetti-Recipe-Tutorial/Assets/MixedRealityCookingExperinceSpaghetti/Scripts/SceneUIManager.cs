@@ -27,6 +27,11 @@ public class SceneUIManager : MonoBehaviour
     [SerializeField]public TextMeshProUGUI eyeMessage;
     [SerializeField]public TextMeshProUGUI instructionSteps;
 
+    [Tooltip("Button")]
+    [SerializeField] public GameObject backBtn;
+    [SerializeField] public GameObject homeBtn;
+    [SerializeField] public GameObject nextBtn;
+
     [Header("Object")]
     [Tooltip("Anchor Cube")]
     [SerializeField] public GameObject anchorCube;
@@ -132,6 +137,8 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(false);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                backBtn.SetActive(true);
+                homeBtn.SetActive(false);
 
             }
             if (count == 2)
@@ -143,6 +150,8 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(false);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                backBtn.SetActive(true);
+                homeBtn.SetActive(false);
             }
             if (count == 3)
             {
@@ -153,6 +162,8 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(true);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                backBtn.SetActive(true);
+                homeBtn.SetActive(false);
             }
             if (count == 4)
             {
@@ -163,6 +174,8 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(false);
                 noodles.SetActive(true);
                 sink.SetActive(true);
+                backBtn.SetActive(true);
+                homeBtn.SetActive(false);
             }
             if (count == 5)
             {
@@ -173,24 +186,41 @@ public class SceneUIManager : MonoBehaviour
                 sauce.SetActive(false);
                 noodles.SetActive(false);
                 sink.SetActive(false);
+                backBtn.SetActive(true);
+                homeBtn.SetActive(true);
+                nextBtn.SetActive(false);
             }
             count++;
         }
     }
 
+    public void BackFunction()
+    {
+        if(count > 0)
+        {
+            count--;
+            Debug.Log("Back - " + count);
+            NextFunction();
+        }
+        
+    }
     #endregion
 
-    #region private methods
+   // #region private methods
     //Initial method to display starting message stored in array
-    private void Start()
+    void Start()
     {
         Debug.Log("length" + insruction.Length);
         count = 0;
         if (count == 0)
         {
+            backBtn.SetActive(false);
+            homeBtn.SetActive(false);
             instructionSteps.text = insruction[count];
             count++;
+            //Debug.Log("Start count - " + count);
         }
     }
-    #endregion
+   
+   // #endregion
 }
