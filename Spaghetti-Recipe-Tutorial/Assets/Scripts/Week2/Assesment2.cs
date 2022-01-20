@@ -24,8 +24,4 @@ public class Assesment2 : MonoBehaviour
         ObjectRenderer.material.color = colors[ColorValue];
     }
 
-    public void ChangeObject()
-    {
-
-    }
 }
