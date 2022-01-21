@@ -6,7 +6,6 @@ public class ObjectChange : MonoBehaviour
 {
 
     public MeshFilter CubeMesh;
-    //public GameObject cube;
     public Mesh[] objects;
     private int ObjectValue;
 
