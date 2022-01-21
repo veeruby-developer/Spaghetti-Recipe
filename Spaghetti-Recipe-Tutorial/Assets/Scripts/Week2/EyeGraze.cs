@@ -17,7 +17,7 @@ public class EyeGraze : MonoBehaviour
         {
             temp = gameObject.transform.localScale;
 
-            if (temp.x <= 1.5 && temp.y <= 1.5 && temp.z <= 1.5)
+            if (temp.x <= 1 && temp.y <= 1 && temp.z <= 1)
             {
                 temp.x += 0.001f;
                 temp.y += 0.001f;

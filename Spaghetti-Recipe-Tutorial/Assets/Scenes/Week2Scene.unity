@@ -1073,9 +1073,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a65de56f3a91e642aea93d0a892679f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 890766152}
-  Sphere: {fileID: 705734388}
-  Cylinder: {fileID: 151995755}
+  CubeMesh: {fileID: 890766155}
+  objects:
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1105892230
 MonoBehaviour:
   m_ObjectHideFlags: 0
