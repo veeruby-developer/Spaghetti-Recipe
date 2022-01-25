@@ -86,3 +86,10 @@ MonoBehaviour:
       id: 1
       description: Select
       axisConstraint: 2
+  - localizationKey: 
+    keyword: Back
+    keyCode: 0
+    action:
+      id: 1
+      description: Select
+      axisConstraint: 2

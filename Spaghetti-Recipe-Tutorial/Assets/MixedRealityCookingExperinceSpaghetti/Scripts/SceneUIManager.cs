@@ -48,6 +48,9 @@ public class SceneUIManager : MonoBehaviour
     [SerializeField] public GameObject noodles;
     [SerializeField] public GameObject sink;
 
+    [Header("Audio Source")]
+    [SerializeField] public AudioSource audio;
+
     int count;
 
     #region Public Methods
@@ -67,6 +70,9 @@ public class SceneUIManager : MonoBehaviour
         homeTogglePage.SetActive(false);
         recipeInstructionPage.SetActive(false);
         modePage.SetActive(true);
+        audio.Stop();
+        //nextBtn.SetActive(true);
+        //backBtn.SetActive(true);
     }
 
     //Setup mode button function
@@ -125,9 +131,10 @@ public class SceneUIManager : MonoBehaviour
     //Next function for recipe mode
     public void NextFunction()
     {
+        count++;
         if (count < insruction.Length)
         {
-            Debug.Log("Count = " + count);
+            Debug.Log("NExt Count = " + count);
             if (count == 1)
             {
                 instructionSteps.text = insruction[count];
@@ -139,7 +146,7 @@ public class SceneUIManager : MonoBehaviour
                 sink.SetActive(false);
                 backBtn.SetActive(true);
                 homeBtn.SetActive(false);
-
+                nextBtn.SetActive(true);
             }
             if (count == 2)
             {
@@ -152,6 +159,7 @@ public class SceneUIManager : MonoBehaviour
                 sink.SetActive(false);
                 backBtn.SetActive(true);
                 homeBtn.SetActive(false);
+                nextBtn.SetActive(true);
             }
             if (count == 3)
             {
@@ -176,6 +184,7 @@ public class SceneUIManager : MonoBehaviour
                 sink.SetActive(true);
                 backBtn.SetActive(true);
                 homeBtn.SetActive(false);
+                nextBtn.SetActive(true);
             }
             if (count == 5)
             {
@@ -190,23 +199,99 @@ public class SceneUIManager : MonoBehaviour
                 homeBtn.SetActive(true);
                 nextBtn.SetActive(false);
             }
-            count++;
+            
         }
+        
     }
 
     public void BackFunction()
     {
-        if(count > 0)
+        count--;
+        if (count >= 0)
         {
-            count--;
-            Debug.Log("Back - " + count);
-            NextFunction();
+            if (count == 0)
+            {
+                backBtn.SetActive(false);
+                homeBtn.SetActive(false);
+                nextBtn.SetActive(true);
+                instructionSteps.text = insruction[count];
+                //count++;
+
+            }
+            Debug.Log("back = " + count);
+                if (count == 1)
+                {
+                    instructionSteps.text = insruction[count];
+                    anchorCube.SetActive(true);
+                    stove.SetActive(true);
+                    fridge.SetActive(false);
+                    sauce.SetActive(false);
+                    noodles.SetActive(false);
+                    sink.SetActive(false);
+                    backBtn.SetActive(true);
+                    homeBtn.SetActive(false);
+                    nextBtn.SetActive(true);
+                }
+                if (count == 2)
+                {
+                    instructionSteps.text = insruction[count];
+                    anchorCube.SetActive(true);
+                    stove.SetActive(false);
+                    fridge.SetActive(true);
+                    sauce.SetActive(false);
+                    noodles.SetActive(false);
+                    sink.SetActive(false);
+                    backBtn.SetActive(true);
+                    homeBtn.SetActive(false);
+                    nextBtn.SetActive(true);
+                }
+                if (count == 3)
+                {
+                    instructionSteps.text = insruction[count];
+                    anchorCube.SetActive(true);
+                    stove.SetActive(false);
+                    fridge.SetActive(false);
+                    sauce.SetActive(true);
+                    noodles.SetActive(false);
+                    sink.SetActive(false);
+                    backBtn.SetActive(true);
+                    homeBtn.SetActive(false);
+                nextBtn.SetActive(true);
+            }
+                if (count == 4)
+                {
+                    instructionSteps.text = insruction[count];
+                    anchorCube.SetActive(true);
+                    stove.SetActive(true);
+                    fridge.SetActive(false);
+                    sauce.SetActive(false);
+                    noodles.SetActive(true);
+                    sink.SetActive(true);
+                    backBtn.SetActive(true);
+                    homeBtn.SetActive(false);
+                nextBtn.SetActive(true);
+            }
+                if (count == 5)
+                {
+                    instructionSteps.text = insruction[count];
+                    anchorCube.SetActive(true);
+                    stove.SetActive(true);
+                    fridge.SetActive(false);
+                    sauce.SetActive(false);
+                    noodles.SetActive(false);
+                    sink.SetActive(false);
+                    backBtn.SetActive(true);
+                    homeBtn.SetActive(true);
+                    nextBtn.SetActive(false);
+                }
+            
         }
+        
         
     }
     #endregion
 
-   // #region private methods
+#region private methods
     //Initial method to display starting message stored in array
     void Start()
     {
@@ -216,11 +301,10 @@ public class SceneUIManager : MonoBehaviour
         {
             backBtn.SetActive(false);
             homeBtn.SetActive(false);
+            nextBtn.SetActive(true);
             instructionSteps.text = insruction[count];
-            count++;
-            //Debug.Log("Start count - " + count);
+            Debug.Log("Start count - " + count);
         }
     }
-   
-   // #endregion
+#endregion
 }

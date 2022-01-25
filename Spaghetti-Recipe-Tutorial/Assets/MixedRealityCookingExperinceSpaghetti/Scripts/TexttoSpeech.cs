@@ -21,6 +21,7 @@ public class TexttoSpeech : MonoBehaviour
     }
     public async void SpeechPlayback()
     {
+        audioSource.Stop();
         string msg = inputText.text;
         // Required to insure non-blocking code in the main Unity UI thread.
         await Task.Run(() => SpeakWithSDKPlugin(msg));
