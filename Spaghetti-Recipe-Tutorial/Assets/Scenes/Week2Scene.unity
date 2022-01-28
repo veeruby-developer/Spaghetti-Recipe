@@ -928,7 +928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890766152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.57, z: 3.03}
+  m_LocalPosition: {x: 0.13, y: 0.21, z: 2.7}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1484,7 +1484,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 1, b: 0.8894582, a: 1}
+    m_NormalColor: {r: 0.9295301, g: 0.9716981, b: 0.9670679, a: 1}
     m_HighlightedColor: {r: 0.98039216, g: 0.6972317, b: 0.4313726, a: 1}
     m_PressedColor: {r: 0.57181233, g: 0.9811321, b: 0.43873262, a: 1}
     m_SelectedColor: {r: 0, g: 1, b: 0.9300573, a: 1}
