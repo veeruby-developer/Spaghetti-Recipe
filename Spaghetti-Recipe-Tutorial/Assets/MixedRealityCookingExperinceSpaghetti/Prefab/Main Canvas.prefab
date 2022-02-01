@@ -2605,7 +2605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5, y: 48}
+  m_AnchoredPosition: {x: -12, y: 48}
   m_SizeDelta: {x: 40.8, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1081777877
@@ -4707,7 +4707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6, y: 20}
+  m_AnchoredPosition: {x: -8.7, y: 20}
   m_SizeDelta: {x: 40.8, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1718384459
@@ -6099,6 +6099,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 291bf9326e517b0489c2ee53d0a6a63f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ButtonReleased:
     m_PersistentCalls:
       m_Calls: []
@@ -6530,7 +6542,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &807815679214310157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7592,8 +7604,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 449.5169, y: 349.28784, z: 1}
-  m_Center: {x: -1.1781484, y: 1.7172478, z: 0}
+  m_Size: {x: 449.51685, y: 863.5372, z: 19.851564}
+  m_Center: {x: -1.1781569, y: -45.223248, z: -4.9609537}
 --- !u!114 &419352201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8072,8 +8084,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 449.51358, y: 349.2878, z: 1}
-  m_Center: {x: -1.1750749, y: -1.7172047, z: 0}
+  m_Size: {x: 449.51358, y: 858.1845, z: 16.445791}
+  m_Center: {x: -1.1750749, y: -53.532223, z: -7.722896}
 --- !u!114 &1378007256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8405,13 +8417,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFocusRequired: 0
   keywords:
-  - keyword: Next
+  - keyword: Back
     response:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SceneUIManager, Assembly-CSharp
-          m_MethodName: NextFunction
+          m_MethodName: BackFunction
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

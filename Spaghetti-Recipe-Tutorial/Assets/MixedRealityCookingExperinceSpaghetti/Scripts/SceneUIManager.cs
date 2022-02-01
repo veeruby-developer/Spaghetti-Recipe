@@ -39,17 +39,12 @@ public class SceneUIManager : MonoBehaviour
     [Header("Instructions")]
     [Tooltip("Recipe steps")]
     [SerializeField] public string[] insruction;
-
-    
-    [Header("ToolTip Objects")]
-    [SerializeField] public GameObject stove;
-    [SerializeField] public GameObject fridge;
-    [SerializeField] public GameObject sauce;
-    [SerializeField] public GameObject noodles;
-    [SerializeField] public GameObject sink;
-
+        
     [Header("Audio Source")]
     [SerializeField] public AudioSource audio;
+
+    GameObject[] tooltipObj;
+    bool isTool;
 
     int count;
 
@@ -71,8 +66,7 @@ public class SceneUIManager : MonoBehaviour
         recipeInstructionPage.SetActive(false);
         modePage.SetActive(true);
         audio.Stop();
-        //nextBtn.SetActive(true);
-        //backBtn.SetActive(true);
+        
     }
 
     //Setup mode button function
@@ -138,66 +132,87 @@ public class SceneUIManager : MonoBehaviour
             if (count == 1)
             {
                 instructionSteps.text = insruction[count];
-                anchorCube.SetActive(true);
-                stove.SetActive(true);
-                fridge.SetActive(false);
-                sauce.SetActive(false);
-                noodles.SetActive(false);
-                sink.SetActive(false);
-                backBtn.SetActive(true);
-                homeBtn.SetActive(false);
-                nextBtn.SetActive(true);
+                for(int i = 0; i<tooltipObj.Length; i++)
+                {
+                    if(tooltipObj[i].name == "Stove")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+                
+                
             }
             if (count == 2)
             {
                 instructionSteps.text = insruction[count];
-                anchorCube.SetActive(true);
-                stove.SetActive(false);
-                fridge.SetActive(true);
-                sauce.SetActive(false);
-                noodles.SetActive(false);
-                sink.SetActive(false);
-                backBtn.SetActive(true);
-                homeBtn.SetActive(false);
-                nextBtn.SetActive(true);
+                for (int i = 0; i < tooltipObj.Length; i++)
+                {
+                    if (tooltipObj[i].name == "Fridge")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+                
+                
             }
             if (count == 3)
             {
                 instructionSteps.text = insruction[count];
-                anchorCube.SetActive(true);
-                stove.SetActive(false);
-                fridge.SetActive(false);
-                sauce.SetActive(true);
-                noodles.SetActive(false);
-                sink.SetActive(false);
-                backBtn.SetActive(true);
-                homeBtn.SetActive(false);
+                for (int i = 0; i < tooltipObj.Length; i++)
+                {
+                    if (tooltipObj[i].name == "Spaghetti Sauce")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+                
+                
             }
             if (count == 4)
             {
                 instructionSteps.text = insruction[count];
-                anchorCube.SetActive(true);
-                stove.SetActive(true);
-                fridge.SetActive(false);
-                sauce.SetActive(false);
-                noodles.SetActive(true);
-                sink.SetActive(true);
-                backBtn.SetActive(true);
-                homeBtn.SetActive(false);
-                nextBtn.SetActive(true);
+                for (int i = 0; i < tooltipObj.Length; i++)
+                {
+                    if (tooltipObj[i].name == "Stove" || tooltipObj[i].name == "Sink" || tooltipObj[i].name == "Noodles")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+                
+                
             }
             if (count == 5)
             {
                 instructionSteps.text = insruction[count];
-                anchorCube.SetActive(true);
-                stove.SetActive(true);
-                fridge.SetActive(false);
-                sauce.SetActive(false);
-                noodles.SetActive(false);
-                sink.SetActive(false);
-                backBtn.SetActive(true);
-                homeBtn.SetActive(true);
-                nextBtn.SetActive(false);
+                for (int i = 0; i < tooltipObj.Length; i++)
+                {
+                    if (tooltipObj[i].name == "Stove")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+                
+                
             }
             
         }
@@ -215,76 +230,89 @@ public class SceneUIManager : MonoBehaviour
                 homeBtn.SetActive(false);
                 nextBtn.SetActive(true);
                 instructionSteps.text = insruction[count];
-                //count++;
+                
 
             }
             Debug.Log("back = " + count);
-                if (count == 1)
+            if (count == 1)
+            {
+                instructionSteps.text = insruction[count];
+                for (int i = 0; i < tooltipObj.Length; i++)
                 {
-                    instructionSteps.text = insruction[count];
-                    anchorCube.SetActive(true);
-                    stove.SetActive(true);
-                    fridge.SetActive(false);
-                    sauce.SetActive(false);
-                    noodles.SetActive(false);
-                    sink.SetActive(false);
-                    backBtn.SetActive(true);
-                    homeBtn.SetActive(false);
-                    nextBtn.SetActive(true);
+                    if (tooltipObj[i].name == "Stove")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
                 }
-                if (count == 2)
-                {
-                    instructionSteps.text = insruction[count];
-                    anchorCube.SetActive(true);
-                    stove.SetActive(false);
-                    fridge.SetActive(true);
-                    sauce.SetActive(false);
-                    noodles.SetActive(false);
-                    sink.SetActive(false);
-                    backBtn.SetActive(true);
-                    homeBtn.SetActive(false);
-                    nextBtn.SetActive(true);
-                }
-                if (count == 3)
-                {
-                    instructionSteps.text = insruction[count];
-                    anchorCube.SetActive(true);
-                    stove.SetActive(false);
-                    fridge.SetActive(false);
-                    sauce.SetActive(true);
-                    noodles.SetActive(false);
-                    sink.SetActive(false);
-                    backBtn.SetActive(true);
-                    homeBtn.SetActive(false);
-                nextBtn.SetActive(true);
+                
+
             }
-                if (count == 4)
+            if (count == 2)
+            {
+                instructionSteps.text = insruction[count];
+                for (int i = 0; i < tooltipObj.Length; i++)
                 {
-                    instructionSteps.text = insruction[count];
-                    anchorCube.SetActive(true);
-                    stove.SetActive(true);
-                    fridge.SetActive(false);
-                    sauce.SetActive(false);
-                    noodles.SetActive(true);
-                    sink.SetActive(true);
-                    backBtn.SetActive(true);
-                    homeBtn.SetActive(false);
-                nextBtn.SetActive(true);
-            }
-                if (count == 5)
-                {
-                    instructionSteps.text = insruction[count];
-                    anchorCube.SetActive(true);
-                    stove.SetActive(true);
-                    fridge.SetActive(false);
-                    sauce.SetActive(false);
-                    noodles.SetActive(false);
-                    sink.SetActive(false);
-                    backBtn.SetActive(true);
-                    homeBtn.SetActive(true);
-                    nextBtn.SetActive(false);
+                    if (tooltipObj[i].name == "Fridge")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
                 }
-            
+
+            }
+            if (count == 3)
+            {
+                instructionSteps.text = insruction[count];
+                for (int i = 0; i < tooltipObj.Length; i++)
+                {
+                    if (tooltipObj[i].name == "Spaghetti Sauce")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+            }
+            if (count == 4)
+            {
+                instructionSteps.text = insruction[count];
+                for (int i = 0; i < tooltipObj.Length; i++)
+                {
+                    if (tooltipObj[i].name == "Stove" || tooltipObj[i].name == "Sink" || tooltipObj[i].name == "Noodles")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+          
+            }
+            if (count == 5)
+            {
+                instructionSteps.text = insruction[count];
+                for (int i = 0; i < tooltipObj.Length; i++)
+                {
+                    if (tooltipObj[i].name == "Stove")
+                    {
+                        tooltipObj[i].SetActive(true);
+                    }
+                    else
+                    {
+                        tooltipObj[i].SetActive(false);
+                    }
+                }
+            }
         }
         
         
@@ -295,16 +323,40 @@ public class SceneUIManager : MonoBehaviour
     //Initial method to display starting message stored in array
     void Start()
     {
-        Debug.Log("length" + insruction.Length);
+        isTool = true;
         count = 0;
+        if (count == 0)
+        {
+            instructionSteps.text = insruction[count];
+        }
+    }
+
+    private void Update()
+    {
         if (count == 0)
         {
             backBtn.SetActive(false);
             homeBtn.SetActive(false);
             nextBtn.SetActive(true);
-            instructionSteps.text = insruction[count];
-            Debug.Log("Start count - " + count);
         }
+        if(count <5 && count != 0)
+        {
+            backBtn.SetActive(true);
+            homeBtn.SetActive(false);
+            nextBtn.SetActive(true);
+        }
+        if (count == 5)
+        {
+            backBtn.SetActive(true);
+            homeBtn.SetActive(true);
+            nextBtn.SetActive(false);
+        }
+        if(anchorCube.activeInHierarchy == true && isTool == true)
+        {
+            tooltipObj = GameObject.FindGameObjectsWithTag("Child");
+            isTool = false;
+        }
+        
     }
-#endregion
+    #endregion
 }
