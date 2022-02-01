@@ -12,12 +12,12 @@ public class SpatializeOnOff : MonoBehaviour
 
     private AudioSource m_SourceObject;
     private bool m_IsSpatialized;
-    private TMPro.TextMeshPro m_TextMeshPro;
+    //private TMPro.TextMeshPro m_TextMeshPro;
 
     public void Start()
     {
         m_SourceObject = gameObject.GetComponent<AudioSource>();
-        m_TextMeshPro = ButtonTextObject.GetComponent<TMPro.TextMeshPro>();
+        //m_TextMeshPro = ButtonTextObject.GetComponent<TMPro.TextMeshPro>();
         SetSpatialized();
     }
 
@@ -37,7 +37,7 @@ public class SpatializeOnOff : MonoBehaviour
     {
         m_IsSpatialized = true;
         m_SourceObject.spatialBlend = 1;
-        m_TextMeshPro.SetText("Set Stereo");
+        //m_TextMeshPro.SetText("Set Stereo");
         //m_SourceObject.outputAudioMixerGroup = RoomEffectGroup;
     }
 
@@ -45,7 +45,7 @@ public class SpatializeOnOff : MonoBehaviour
     {
         m_IsSpatialized = false;
         m_SourceObject.spatialBlend = 0;
-        m_TextMeshPro.SetText("Set Spatialized");
+        //m_TextMeshPro.SetText("Set Spatialized");
         //m_SourceObject.outputAudioMixerGroup = MasterGroup;
     }
 }
