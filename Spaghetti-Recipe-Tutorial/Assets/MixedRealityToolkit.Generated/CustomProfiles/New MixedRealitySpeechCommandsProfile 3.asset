@@ -62,13 +62,13 @@ MonoBehaviour:
     keyword: Start Animation
     keyCode: 0
     action:
-      id: 0
-      description: None
-      axisConstraint: 0
+      id: 1
+      description: Select
+      axisConstraint: 2
   - localizationKey: 
     keyword: Stop Animation
     keyCode: 0
     action:
-      id: 0
-      description: None
-      axisConstraint: 0
+      id: 1
+      description: Select
+      axisConstraint: 2
