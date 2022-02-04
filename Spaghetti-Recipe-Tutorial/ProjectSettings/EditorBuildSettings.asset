@@ -17,12 +17,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Week2Scene.unity
     guid: d8532ee94498ebd4c8734b9960a71e43
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Week3Video.unity
     guid: f8ed260065c062a46818c43ab0e5e597
   - enabled: 0
     path: Assets/Scenes/Week3BoxFocus.unity
     guid: 403331bfe18fc2f4ebfa1625421ca1e9
+  - enabled: 1
+    path: Assets/Scenes/Week3.unity
+    guid: 7b7c78f7339941744b1ac05eca8d461d
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cec5a25977fa00849bd038231fc30354, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 02d6581e291f59346b17991cda781d6c, type: 2}
