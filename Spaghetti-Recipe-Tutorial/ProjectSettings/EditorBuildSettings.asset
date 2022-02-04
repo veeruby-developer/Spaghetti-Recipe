@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Week2Scene.unity
     guid: d8532ee94498ebd4c8734b9960a71e43
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Week3Video.unity
     guid: f8ed260065c062a46818c43ab0e5e597
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Week3BoxFocus.unity
     guid: 403331bfe18fc2f4ebfa1625421ca1e9
   m_configObjects:

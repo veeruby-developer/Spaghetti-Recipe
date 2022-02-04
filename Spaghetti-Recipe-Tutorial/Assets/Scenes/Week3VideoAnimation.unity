@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: 24ce277bdba494945878786552d234d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.172172
+      value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: 24ce277bdba494945878786552d234d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 24ce277bdba494945878786552d234d4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 24ce277bdba494945878786552d234d4, type: 3}
       propertyPath: m_Controller
@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: f1b75a761c8655844b3a290a7015af61, type: 2}
     - target: {fileID: 9500000, guid: 24ce277bdba494945878786552d234d4, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24ce277bdba494945878786552d234d4, type: 3}
@@ -269,6 +269,19 @@ MonoBehaviour:
           m_CallState: 2
   persistentKeywords: 0
   speechConfirmationTooltipPrefab: {fileID: 0}
+--- !u!65 &131995564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131995558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7574382, y: 1.0594577, z: 1.0105085}
+  m_Center: {x: -0.024222689, y: 0.45496887, z: 0.06261615}
 --- !u!1 &375410988
 GameObject:
   m_ObjectHideFlags: 0

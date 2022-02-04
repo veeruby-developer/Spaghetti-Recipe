@@ -14,12 +14,14 @@ public class CatAnimation : MonoBehaviour
     }
     public void StartVoiceCommand()
     {
-        CatAnime.enabled = true;
+        //CatAnime.enabled = true;
+        CatAnime.SetBool("AnimActive", true);
     }
 
     // Update is called once per frame
     public void StopVoiceCommand()
     {
-        CatAnime.enabled = false;
+        //CatAnime.enabled = false;
+        CatAnime.SetBool("AnimActive", false);
     }
 }
