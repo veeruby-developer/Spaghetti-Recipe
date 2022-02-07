@@ -5,28 +5,26 @@ using UnityEngine.Video;
 
 public class PlayNextVideo : MonoBehaviour
 {
+    [Header("Videos List")]
     public VideoClip[] videos;
     private VideoPlayer videoPlayer;
     private int videoClipIndex;
 
+    //Video starts to play on awake
     private void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-
         videoPlayer.clip = videos[videoClipIndex];
-
     }
 
-    // Update is called once per frame
+    // Video Change logic
     public void Next()
     {
         videoClipIndex++;
-        //videoPlayer.clip = videos[videoClipIndex];
         videoPlayer.Play();
         if (videoClipIndex > 2)
         {

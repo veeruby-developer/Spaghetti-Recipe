@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class CatAnimation : MonoBehaviour
 {
+    //Animator declaration 
     private Animator CatAnime;
-    //public GameObject cat;
-    // Start is called before the first frame update
 
     private void Start()
     {
         CatAnime = GetComponent<Animator>();
     }
+
+    //Start Animation voice command function
+    
     public void StartVoiceCommand()
     {
-        //CatAnime.enabled = true;
         CatAnime.SetBool("AnimActive", true);
     }
 
-    // Update is called once per frame
+    //Stop Animation voice command function
     public void StopVoiceCommand()
     {
         //CatAnime.enabled = false;
