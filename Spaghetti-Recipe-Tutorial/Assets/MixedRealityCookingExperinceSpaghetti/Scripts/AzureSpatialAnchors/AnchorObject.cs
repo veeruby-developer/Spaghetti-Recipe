@@ -22,6 +22,7 @@ public class AnchorObject : MonoBehaviour
 
     private readonly Queue<Action> dispatchQueue = new Queue<Action>();
 
+
     #region Unity Lifecycle
     void Start()
     {
