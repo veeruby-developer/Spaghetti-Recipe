@@ -881,7 +881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6684140848755131765, guid: cb959ef7cc3313241989aa91522b4da5, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6684140848755131765, guid: cb959ef7cc3313241989aa91522b4da5, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -889,11 +889,15 @@ PrefabInstance:
       objectReference: {fileID: 3696250124021570027}
     - target: {fileID: 6684140848755131765, guid: cb959ef7cc3313241989aa91522b4da5, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FindAzureAnchor
+      value: GetAzureAnchorIdFromDisk
       objectReference: {fileID: 0}
     - target: {fileID: 6684140848755131765, guid: cb959ef7cc3313241989aa91522b4da5, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AnchorObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150185852006997247, guid: cb959ef7cc3313241989aa91522b4da5, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7150185852006997247, guid: cb959ef7cc3313241989aa91522b4da5, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
