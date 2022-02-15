@@ -160,11 +160,13 @@ public class AnchorObject : MonoBehaviour
             if (success)
             {
                 Debug.Log($"Azure anchor with ID '{currentCloudAnchor.Identifier}' created successfully");
-
+               
 
                 // Update the current Azure anchor ID
                 Debug.Log($"Current Azure anchor ID updated to '{currentCloudAnchor.Identifier}'");
                 currentAzureAnchorID = currentCloudAnchor.Identifier;
+
+                SaveAzureAnchorIdToDisk();
             }
             else
             {
@@ -198,6 +200,8 @@ public class AnchorObject : MonoBehaviour
     public void FindAzureAnchor(string id = "")
     {
         Debug.Log("\nAnchorModuleScript.FindAzureAnchor()");
+
+        GetAzureAnchorIdFromDisk();
 
         if (id != "")
         {
