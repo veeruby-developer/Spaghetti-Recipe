@@ -8,19 +8,13 @@ using UnityEngine.Networking;
 using Microsoft.Azure.SpatialAnchors;
 using Microsoft.Azure.SpatialAnchors.Unity;
 
-#if WINDOWS_UWP
-using Windows.Storage;
-#endif
 
 public class AnchorObject : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("The unique identifier used to identify the shared file (containing the Azure anchor ID) on the web server.")]
-    private string publicSharingPin = "1982734901747";
-
     [HideInInspector]
     // Anchor ID for anchor stored in Azure (provided by Azure) 
     public string currentAzureAnchorID = "";
+
 
     private SpatialAnchorManager cloudManager;
     private CloudSpatialAnchor currentCloudAnchor;
@@ -28,7 +22,6 @@ public class AnchorObject : MonoBehaviour
     private CloudSpatialAnchorWatcher currentWatcher;
 
     private readonly Queue<Action> dispatchQueue = new Queue<Action>();
-
 
     #region Unity Lifecycle
     void Start()
@@ -66,8 +59,6 @@ public class AnchorObject : MonoBehaviour
             currentWatcher = null;
         }
     }
-
-
     #endregion
 
     #region Public Methods
@@ -107,6 +98,7 @@ public class AnchorObject : MonoBehaviour
     public async void CreateAzureAnchor(GameObject theObject)
     {
         Debug.Log("\nAnchorModuleScript.CreateAzureAnchor()");
+ 
 
         // First we create a native XR anchor at the location of the object in question
         gameObject.CreateNativeAnchor();
@@ -160,13 +152,11 @@ public class AnchorObject : MonoBehaviour
             if (success)
             {
                 Debug.Log($"Azure anchor with ID '{currentCloudAnchor.Identifier}' created successfully");
-               
+
 
                 // Update the current Azure anchor ID
                 Debug.Log($"Current Azure anchor ID updated to '{currentCloudAnchor.Identifier}'");
                 currentAzureAnchorID = currentCloudAnchor.Identifier;
-
-                SaveAzureAnchorIdToDisk();
             }
             else
             {
@@ -200,8 +190,6 @@ public class AnchorObject : MonoBehaviour
     public void FindAzureAnchor(string id = "")
     {
         Debug.Log("\nAnchorModuleScript.FindAzureAnchor()");
-
-        GetAzureAnchorIdFromDisk();
 
         if (id != "")
         {
@@ -248,44 +236,6 @@ public class AnchorObject : MonoBehaviour
 
         Debug.Log("Azure anchor deleted successfully");
     }
-
-
-    public void SaveAzureAnchorIdToDisk()
-    {
-        Debug.Log("\nAnchorModuleScript.SaveAzureAnchorIDToDisk()");
-
-        string filename = "SavedAzureAnchorID.txt";
-        string path = Application.persistentDataPath;
-
-#if WINDOWS_UWP
-        StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-        path = storageFolder.Path.Replace('\\', '/') + "/";
-#endif
-
-        string filePath = Path.Combine(path, filename);
-        File.WriteAllText(filePath, currentAzureAnchorID);
-
-        Debug.Log($"Current Azure anchor ID '{currentAzureAnchorID}' successfully saved to path '{filePath}'");
-    }
-
-    public void GetAzureAnchorIdFromDisk()
-    {
-        Debug.Log("\nAnchorModuleScript.LoadAzureAnchorIDFromDisk()");
-
-        string filename = "SavedAzureAnchorID.txt";
-        string path = Application.persistentDataPath;
-
-#if WINDOWS_UWP
-        StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-        path = storageFolder.Path.Replace('\\', '/') + "/";
-#endif
-
-        string filePath = Path.Combine(path, filename);
-        currentAzureAnchorID = File.ReadAllText(filePath);
-
-        Debug.Log($"Current Azure anchor ID successfully updated with saved Azure anchor ID '{currentAzureAnchorID}' from path '{path}'");
-    }
-
 
     #endregion
 
