@@ -11,15 +11,7 @@ public class SpeechToTextTranslator : MonoBehaviour
     public string SpeechServiceAPIKey = "";
     public string SpeechServiceRegion = "";
 
-    [Header("Input and Translate Language TextMeshProUGUI")]
     public TextMeshProUGUI inputText;
-    public TextMeshProUGUI translatedText;
-
-    [Header("Game Object to Instantiate")]
-    public GameObject StickNote_prefab;
-    private GameObject StickNote;
-    //Parent object to instantiate stick note
-    public GameObject Background;
 
     private object threadLocker = new object();
     private bool waitingForReco;
@@ -27,38 +19,16 @@ public class SpeechToTextTranslator : MonoBehaviour
     private string inputMessage;
 
     private string translatedString = "";
-    private string sourceLanguage = "en-US";
+    public string sourceLanguage = "en-US";
 
-    private string completeTranslatedText = string.Empty;
-    private string completeRegonizedText = string.Empty;
+    public string completeTranslatedText = string.Empty;
+    public string completeRegonizedText = string.Empty;
 
-    private string micStatus = "on";
+    public string micStatus = "on";
 
     private TranslationRecognizer speechTranslator;
 
     public static TaskCompletionSource<int> stopRecognition = new TaskCompletionSource<int>();
-
-    public enum TranslateToLanguage{Russian, German, Chinese};
-
-    public TranslateToLanguage TargetLanguage = TranslateToLanguage.Russian;
-
-    private string toLanguage = "";
-
-    void Start()
-    {
-        switch(TargetLanguage)
-        {
-            case TranslateToLanguage.Russian:
-                toLanguage = "ru-Ru";
-                break;
-            case TranslateToLanguage.German:
-                toLanguage = "de-DE";
-                break;
-            case TranslateToLanguage.Chinese:
-                toLanguage = "zh-HK";
-                break;
-        }
-    }
 
     #region Speech Recognition Even Handlers
     private void HandleTranslatorRecognizing(object s, TranslationRecognitionEventArgs e)
@@ -152,7 +122,7 @@ public class SpeechToTextTranslator : MonoBehaviour
         SpeechTranslationConfig config = SpeechTranslationConfig.FromSubscription(SpeechServiceAPIKey, SpeechServiceRegion);
         config.SpeechRecognitionLanguage = sourceLanguage;
         stopRecognition = new TaskCompletionSource<int>();
-        config.AddTargetLanguage(toLanguage);
+        config.AddTargetLanguage(sourceLanguage);
         using (speechTranslator = new TranslationRecognizer(config))
         {
             lock (threadLocker)
@@ -213,21 +183,6 @@ public class SpeechToTextTranslator : MonoBehaviour
         lock (threadLocker)
         {         
                 inputText.text = inputMessage;
-                translatedText.text = translatedMessage;
         }        
-    }
-
-    //Notepad instantiation
-    public void instantiateNotePad()
-    {
-        StickNote = Instantiate(StickNote_prefab, Background.transform.position,StickNote_prefab.transform.rotation);
-        StickNote.transform.SetParent(Background.transform);
-        StickNote.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
-
-        GameObject SaveNoteSpeak = StickNote.gameObject.transform.GetChild(0).gameObject;
-        SaveNoteSpeak.GetComponent<TextMeshProUGUI>().text = inputMessage;
-        
-        GameObject SaveNoteTranslated = StickNote.gameObject.transform.GetChild(1).gameObject;
-        SaveNoteTranslated.GetComponent<TextMeshProUGUI>().text = translatedMessage;
     }
 }

@@ -14,7 +14,7 @@ public class AnchorObject : MonoBehaviour
     [HideInInspector]
     // Anchor ID for anchor stored in Azure (provided by Azure) 
     public string currentAzureAnchorID = "";
-
+    public string removeAnchor = "Inactive";
 
     private SpatialAnchorManager cloudManager;
     private CloudSpatialAnchor currentCloudAnchor;
@@ -98,7 +98,7 @@ public class AnchorObject : MonoBehaviour
     public async void CreateAzureAnchor(GameObject theObject)
     {
         Debug.Log("\nAnchorModuleScript.CreateAzureAnchor()");
- 
+        removeAnchor = "Active";
 
         // First we create a native XR anchor at the location of the object in question
         gameObject.CreateNativeAnchor();
@@ -276,6 +276,7 @@ public class AnchorObject : MonoBehaviour
                     transform.position = anchorPose.position;
                     transform.rotation = anchorPose.rotation;
 
+                    removeAnchor = "Inactive";
                     // Create a native anchor at the location of the object in question
                     gameObject.CreateNativeAnchor();
 

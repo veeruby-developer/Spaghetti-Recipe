@@ -9,6 +9,10 @@ using TMPro;
 
 public class TexttoSpeech : MonoBehaviour
 {
+    [Header("Speech SDK Credentials")]
+    public string SpeechServiceAPIKey = "";
+    public string SpeechServiceRegion = "";
+
     public static TexttoSpeech instance;
     public AudioSource audioSource;
     public TMP_Text inputText;
@@ -21,6 +25,7 @@ public class TexttoSpeech : MonoBehaviour
     }
     public async void SpeechPlayback()
     {
+        audioSource.Stop();
         string msg = inputText.text;
         // Required to insure non-blocking code in the main Unity UI thread.
         await Task.Run(() => SpeakWithSDKPlugin(msg));
@@ -35,7 +40,7 @@ public class TexttoSpeech : MonoBehaviour
 
         // Creates an instance of a speech config with specified subscription key and service region.
         // Replace with your own subscription key and service region (e.g., "westus").
-        var config = SpeechConfig.FromSubscription("a0d0cfba77c84a7e95383e99a90495c0", "centralindia");        
+        var config = SpeechConfig.FromSubscription(SpeechServiceAPIKey, SpeechServiceRegion);        
         synthesizer = new SpeechSynthesizer(config, null);
         Task<SpeechSynthesisResult> Speaking = synthesizer.SpeakTextAsync(message);
         Debug.Log(message);
