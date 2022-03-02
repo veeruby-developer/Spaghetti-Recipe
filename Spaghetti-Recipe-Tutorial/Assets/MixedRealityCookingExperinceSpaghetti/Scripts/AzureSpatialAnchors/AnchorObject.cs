@@ -9,6 +9,10 @@ using Microsoft.Azure.SpatialAnchors;
 using Microsoft.Azure.SpatialAnchors.Unity;
 
 
+#if WINDOWS_UWP
+using Windows.Storage;
+#endif
+
 public class AnchorObject : MonoBehaviour
 {
     [HideInInspector]
@@ -157,6 +161,8 @@ public class AnchorObject : MonoBehaviour
                 // Update the current Azure anchor ID
                 Debug.Log($"Current Azure anchor ID updated to '{currentCloudAnchor.Identifier}'");
                 currentAzureAnchorID = currentCloudAnchor.Identifier;
+
+                SaveAzureAnchorIdToDisk();
             }
             else
             {
@@ -190,6 +196,8 @@ public class AnchorObject : MonoBehaviour
     public void FindAzureAnchor(string id = "")
     {
         Debug.Log("\nAnchorModuleScript.FindAzureAnchor()");
+
+        GetAzureAnchorIdFromDisk();
 
         if (id != "")
         {
@@ -236,6 +244,46 @@ public class AnchorObject : MonoBehaviour
 
         Debug.Log("Azure anchor deleted successfully");
     }
+
+    //Save Azure Anchor ID to hololens local storage logic
+    public void SaveAzureAnchorIdToDisk()
+    {
+        Debug.Log("\nAnchorModuleScript.SaveAzureAnchorIDToDisk()");
+
+        string filename = "SavedAzureAnchorID.txt";
+        string path = Application.persistentDataPath;
+
+#if WINDOWS_UWP
+        StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
+        path = storageFolder.Path.Replace('\\', '/') + "/";
+#endif
+
+        string filePath = Path.Combine(path, filename);
+        File.WriteAllText(filePath, currentAzureAnchorID);
+
+        Debug.Log($"Current Azure anchor ID '{currentAzureAnchorID}' successfully saved to path '{filePath}'");
+    }
+
+    //Retrive Azure Anchor ID from hololens local storage logic
+    public void GetAzureAnchorIdFromDisk()
+    {
+        Debug.Log("\nAnchorModuleScript.LoadAzureAnchorIDFromDisk()");
+
+        string filename = "SavedAzureAnchorID.txt";
+        string path = Application.persistentDataPath;
+
+#if WINDOWS_UWP
+        StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
+        path = storageFolder.Path.Replace('\\', '/') + "/";
+#endif
+
+        string filePath = Path.Combine(path, filename);
+        currentAzureAnchorID = File.ReadAllText(filePath);
+
+        Debug.Log($"Current Azure anchor ID successfully updated with saved Azure anchor ID '{currentAzureAnchorID}' from path '{path}'");
+    }
+
+
 
     #endregion
 

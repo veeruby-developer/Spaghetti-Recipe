@@ -53,6 +53,11 @@ public class SceneUIManager : MonoBehaviour
 
     #region Public Methods
 
+    //public void Start()
+    //{
+    //    FindAnchor();
+    //}
+
     //Loading mode page
     public void LoadMainMenu()
     {
