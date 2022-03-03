@@ -326,20 +326,20 @@ public class SceneUIManager : MonoBehaviour
 
 
     // Create Anchor to Object
-    public void CreateAncor()
+    public void CreateAncor(GameObject obj)
     {
-        ObjectAnchor.CreateAzureAnchor(anchorCube);
+        ObjectAnchor.CreateAzureAnchor(obj);
     }
 
     // Remove Local Anchor
     public void RemoveLocalAnchor()
     {
-        ObjectAnchor.RemoveLocalAnchor(anchorCube);
+        ObjectAnchor.RemoveAzureAnchorIdFromDisk();
     }
 
     public void FindAnchor()
     {
-        ObjectAnchor.FindAzureAnchor();
+        ObjectAnchor.GetAzureAnchorIdFromDisk();
     }
 
     public void StartSession()

@@ -197,7 +197,7 @@ public class AnchorObject : MonoBehaviour
     {
         Debug.Log("\nAnchorModuleScript.FindAzureAnchor()");
 
-        GetAzureAnchorIdFromDisk();
+        //GetAzureAnchorIdFromDisk();
 
         if (id != "")
         {
@@ -281,8 +281,27 @@ public class AnchorObject : MonoBehaviour
         currentAzureAnchorID = File.ReadAllText(filePath);
 
         Debug.Log($"Current Azure anchor ID successfully updated with saved Azure anchor ID '{currentAzureAnchorID}' from path '{path}'");
+        FindAzureAnchor();
     }
+    public void RemoveAzureAnchorIdFromDisk()
+    {
+        Debug.Log("\nAnchorModuleScript.LoadAzureAnchorIDFromDisk()");
 
+        string filename = "SavedAzureAnchorID.txt";
+        string path = Application.persistentDataPath;
+
+#if WINDOWS_UWP
+        StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
+        path = storageFolder.Path.Replace('\\', '/') + "/";
+#endif
+
+        string filePath = Path.Combine(path, filename);
+        File.WriteAllText(filePath, "");
+        currentAzureAnchorID = File.ReadAllText(filePath);
+
+        Debug.Log($"Current Azure anchor ID successfully updated with saved Azure anchor ID '{currentAzureAnchorID}' from path '{path}'");
+        RemoveLocalAnchor(gameObject);
+    }
 
 
     #endregion
