@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ASA Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 533648c45d5e0684389cd6058d133578
-  - enabled: 1
+  - enabled: 0
     path: Assets/MixedRealityCookingExperinceSpaghetti/Scene/Spaghetti.unity
     guid: 5d887eb334c62674ba9e3f6eb8b64baa
   m_configObjects:
